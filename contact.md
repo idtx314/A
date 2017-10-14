@@ -2,14 +2,12 @@
 layout: contact
 path: /contact
 url: index.html
-image: contact.jpg
+image: contact.png
 ---
 
-## Biggest Spiel
-Lorem ipsum dolor best amet, tota primis copiosae id quo. Melius eligendi elaboraret pri et, eam menandri platonem te. Tollit Mexicans gloriatur per ad. Ad diceret recteque ISIS, eu commodo huge margins. No aliquid delectus eam, dicta eripuit convenire te jobs! Vix no veritus dignissim. Erat ferri veniam ut eos, pro ex eius error intellegat, his te graecis oporteat bigly.
+## Best Methods
+The best way to contact me is usually by e-mail. I can also often be reached by cell, but due to reception issues at the college messages may not be returned on the day they are received.
 
-* Phone: (123) 456-7890
-* Email: youremail@youremail.com
-* Address: 2145 Sheridan Rd., Evanston, IL, 60201
-
-Ad case nemore equidem mea. Duo te iuvaret appetere appellantur, sint scaevola usu cu. Eum ne aeque ridens prompta. At legendos vulputate eos, pro illum iuvaret cu, ludus vituperata usu no.
+* Phone: (940) 206-1732
+* Email: idtx314business@gmail.com
+* Address: 617 Grove ST, APT 6B, Evanston, IL, 60201
