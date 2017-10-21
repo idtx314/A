@@ -2,19 +2,20 @@
 layout: about
 path: /about
 url: index.html
-image: http://unsplash.it/400?random
+image: dance.png
 ---
 
 ## Overview
-Lorem ipsum dolor sit amet, purto tota in vel, exerci discere apeirian has in. Nec noster iracundia eu, utroque facilis ad has. Alii argumentum no his, omnis iusto scripta vim in, ipsum ridens mel at. Has homero phaedrum no, ea autem affert facilis usu, has possim meliore perpetua id. Errem iisque mea ex, option ocurreret no est. Sea facer ullamcorper ne, cu dictas discere repudiandae sea.
+My name is Ian Davis. At the moment I'm pursuing a Master's degree in Robotics from Northwestern University in Illinois. It is my intention to combine this very different training with the existing foundations that I laid while earning my Bachelor's in Molecular and Cell Biology in order to take a broad, user centric approach to the design of robotic and mechatronic devices. 
 
-His nemore audiam consequat ad, no augue choro assueverit mei. Zril offendit tincidunt ne quo. At commodo integre alienum sea, cu vocent fuisset suscipit nam. Eum ex tation omnesque adversarium, mutat autem putant te nam. Id vix facilis complectitur, vis vitae vivendo euripidis ea, fugit eirmod an vix.
+After I complete my Master's I will work to advance the field of Human/Robot interaction by conducting research and developing products, such as neuro-prosthetic devices, that restore and expand human capability.
 
-Ad case nemore equidem mea. Duo te iuvaret appetere appellantur, sint scaevola usu cu. Eum ne aeque ridens prompta. At legendos vulputate eos, pro illum iuvaret cu, ludus vituperata usu no.
-
-Mel magna discere in. Mea ea dicit homero perfecto. Eam nulla facete scribentur in. Vide volutpat laboramus est cu, usu cu impetus dignissim. Ex pro decore impetus. Ius nihil iisque deterruisset an, ex sanctus verterem his. Doming prompta insolens est ut.
 
 ### Research interests
-* Interest 1
-* Interest 2
-* Interest 3
+* Neural Interfaces
+* Human/Machine Interaction
+* Wearable Robotics
+* Soft Robotics
+* Biomaterials
+* Computer Vision
+* Embedded Systems
