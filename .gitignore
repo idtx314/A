@@ -5,3 +5,6 @@ build/
 serve/
 Log.txt
 favicomatic.zip
+*.xcf
+_projects/.Other/
+public/images/extraneous/
