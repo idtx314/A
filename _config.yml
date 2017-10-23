@@ -1,6 +1,6 @@
 # Site settings
-title:              Ian Davis' Portfolio
-email:              idtx314business@gmail.com
+title:              "Ian Davis' Portfolio"
+email:              "idtx314business@gmail.com"
 description:        "The Project Portfolio of Ian Davis"
 url:                "https://idtx314.github.io"
 baseurl:            "/idtx314.github.io"
