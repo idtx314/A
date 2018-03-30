@@ -407,6 +407,12 @@ they do in the following links:
 3. [_layouts/project.html](https://github.com/NU-MSR/msr-student-template/blob/custom_images/_layouts/project.html)
 4. [index.html](https://github.com/NU-MSR/msr-student-template/blob/custom_images/index.html)
 
+####Videos
+  You can embed videos in your project pages using "<iframe>" tags. If you upload your videos to google drive, you can open the file in your drive and click the vertical ellipsis in the top right of your screen, then select "embed item". This will produce a valid iframe tag that you can paste into your markdown document to immediately embed the video. 
+  Note that iframe tags may not work on all page types, like wiki pages, and are prone to breaking. 
+  You can include a fullscreen option in the video by including allowFullscreen in the tag:
+  `<iframe src="video_address" allowFullscreen></iframe>`
+
 ### Math in project posts
 
 The [_includes/head.html](_includes/head.html) contains the following snippet:
