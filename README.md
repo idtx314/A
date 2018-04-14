@@ -1,7 +1,3 @@
-# MSR Student Portfolio Template
-
-
-
 ## Jekyll overview
 
 ### Built with Jekyll
