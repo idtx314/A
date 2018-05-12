@@ -31,7 +31,7 @@ This program was proposed and designed as a group project with 3 other students.
 
 To facilitate our 2-week timeframe, we split the project into segments and each worked on a subset of the needed programming. I handled the code for manipulating the keurig lid and performing the start button press, and took lead on coordinating the final integration when I saw signs that it would be an issue.
 
-![Chassis](../public/images/baxter_open.gif)
+![Chassis](../public/images/baxter_open.gif){: height="415px" width="300px"}
 
 The git repository for this project is available [here](https://github.com/Laurenhut/ME495-final-project).
 
@@ -44,6 +44,6 @@ In order to achieve what I needed to do with Baxter's end effector, I selected a
 
 I elected to use the inverse kinematic solver built into Baxter to perform all required movements for my task set. IK is notoriously unreliable for moving any distance in a controlled fashion, but by using set start positions for all three actions I was able to keep the commanded motions short enough that this unpredictability was not an issue.
 
-![Chassis](../public/images/baxter_close.gif)
+![Chassis](../public/images/baxter_close.gif){: height="297px" width="300px"}
 
 In order for the services to work regardless of where the keurig was in the workspace, all movement commands were translated from desired positions in the keurig's transformation frame relative to Baxter, with the keurig's pose being passed in as part of the service call. However, I found that in practice Baxter's work space was too small to accomodate some orientations. Since this was a physical limitation resulting from Baxter's dynamics I resolved the issue by creating a requirement that wherever it was on the table, the Keurig had to face Baxter.
