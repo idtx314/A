@@ -39,8 +39,7 @@ To build on this potential applicability the wearable uses vibration instead of 
 When large magnetic fields are not a matter of concern, the device has some utility for navigation and orientation as well, since it can be used as a compass in visualization mode.  
 
 
-
-The project consists of several ROS nodes written in Python [here](https://github.com/idtx314/rosglove) and C like code running on an Arduino microcontroller [here](https://github.com/idtx314/gloveduino).
+The ROS code for the project is written in Python, while the Arduino is programmed in a C-like language specific to the hardware. All code can be found in [this repository](https://github.com/idtx314/rosglove)
 
 
 ## Implementation Summary
