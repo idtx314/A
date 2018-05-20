@@ -43,8 +43,9 @@ The ROS code for the project is written in Python, while the Arduino is programm
 
 
 ## Implementation Summary
-The project was built on a Sparkfun Redboard arduino variant connected by USB cable to a Linux laptop computer running Ubuntu 16.04. The Redboard and the laptop use Serial communication over the USB line, while the Redboard communicates with the MPU-9250 and DRV-2605L using the I2C protocol. The hardware prototype is mounted on 3D printed parts and worn on the fingers and forearm using velcro straps.
+The project was built on a Sparkfun Redboard arduino variant connected by USB cable to a Linux laptop computer running Ubuntu 16.04. The Redboard and the laptop use Serial communication over the USB line, while the Redboard communicates with the IMU and haptic motor driver board using the I2C protocol. The hardware prototype is mounted on 3D printed parts and worn on the fingers and forearm using velcro straps.
 
+The MPU-9250 IMU (Inertial Measurement Unit) is 9 axis, including an accelerometer, a gyroscope, and a magnetometer. The magnetometer data is used for determining the magnetic field strength, while the gyro and accelerometer are used to calculate the orientation of the device in space, so that it can be displayed in the visualizer.
 
 The code running on the Redboard relies on the libraries distributed with the driver board and IMU for ease of use, segueing into lower level interactions with the hardware at points where I wanted to test my understanding. I built on redistributable example code authored by "JohnChi" and Kris Winer and maintained the order and general structure of their function calls to avoid hard to diagnose issues in interacting with the IMU.
 
