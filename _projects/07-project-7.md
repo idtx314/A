@@ -24,7 +24,7 @@ permalink: "project-7.html"
 
 ## Summary
 
-The objective of this project is to produce a robust interface via which a user can operate a hobbyist milling machine. The machine and interface will be used to demonstrate the nature and potential of atypical trajectory generation for object manufacturing in 3 dimensions in a way that can be more intuitively understood by an untrained viewer. In particular, it will be used to support exploration of ergodic controllers (cite Ahalya's body of work). Ideally the project will also include a machine vision component to allow a receding horizon control method.  
+The objective of this project is to produce a robust interface via which a user can operate a hobbyist milling machine. The machine and interface will be used to demonstrate the nature and potential of atypical trajectory generation for object manufacturing in 3 dimensions in a way that can be more intuitively understood by an untrained viewer. In particular, it will be used to support exploration of ergodic controllers (Prabhakar et al, 2017). Ideally the project will also include a machine vision component to allow a receding horizon control method.  
 
 The project will consist of a simulation component and a hardware component. The simulation will accept a time dependent trajectory and output a visualization of that trajectory's effect on a simulated stock material, allowing quick validation of trajectory performance.  
 
@@ -36,3 +36,6 @@ The hardware component will consist of a hobbyist milling machine with 3 or more
 
 The project will be written primarily in Python, with ROS being used for modularity in communication between components. The code is currently not available for public viewing.
 
+
+References
+1. Prabhakar, Ahalya, et al. "Autonomous visual rendering using physical motion." arXiv preprint arXiv:1709.02758 (2017).
