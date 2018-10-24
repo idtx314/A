@@ -10,4 +10,5 @@ The best way to contact me is usually by e-mail. I can also often be reached by 
 
 * Phone: (940) 206-1732
 * Email: ian@ianDrobo.com
+* LinkedIn: linkedin.com/in/iandrobo
 * Address: 617 Grove ST, APT 6B, Evanston, IL, 60201
