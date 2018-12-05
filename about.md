@@ -2,20 +2,9 @@
 layout: about
 path: /about
 url: index.html
-image: dance.png
+image: contact.png
 ---
 
 ## Overview
-My name is Ian Davis. At the moment I'm pursuing a Master's degree in Robotics from Northwestern University in Illinois. It is my intention to combine this very different training with the existing foundations that I laid while earning my Bachelor's in Molecular and Cell Biology in order to take a broad, user centric approach to the design of robotic and mechatronic devices. 
-
-After I complete my Master's I will work to advance the field of Human/Robot interaction by conducting research and developing products, such as neuro-prosthetic devices, that restore and expand human capability.
-
-
-### Research interests
-* Neural Interfaces
-* Human/Machine Interaction
-* Wearable Robotics
-* Soft Robotics
-* Biomaterials
-* Computer Vision
-* Embedded Systems
+My name is Ian Davis. I study robotics at Northwestern University, in Chicago. I will be completing my Master's degree on the 15th of December. 
+As a robotics engineer it is important to me that I not overspecialize in any one area of expertise. My interests are focused on mobile robotic systems, such as quad copter drones or NASA's Curiosity rover, and wearable devices that enhance human ability, such as advanced prosthetics or my own mag-sense project. I look forward to using these interest areas as platforms to hone and expand my skills as an engineer.
