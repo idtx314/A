@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Probabilistic Milling Interface
+title: Receding Horizon Milling Interface
 date: June 15, 2018
 image: mill.png
 permalink: "project-7.html"
@@ -10,13 +10,13 @@ permalink: "project-7.html"
 
 |Components                     ||Concepts|
 |:------------------------------||:-----|
-|    Hobbyist Milling Machine     ||    Linux    |
-|    Linux Laptop  ||    Embedded Microprocessors    |
-|    Sensor Array      ||    Trajectory Generation    |
-|    Mill Microcontroller       ||    Computer Vision    |
-|                               ||    Python    |
+|    grbl Controller     ||    Linux    |
+|    Laptop  ||    Embedded Microprocessors    |
+|    USB Camera      ||    ROS    |
+|    X-Carve Mill       ||    Computer Vision    |
+|                               ||    C++, Python    |
 |||    Rviz    |
-|||    ROS    |
+|||    GCode    |
 |||    Receding Horizon Control    |
 
 
