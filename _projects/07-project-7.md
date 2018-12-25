@@ -2,7 +2,7 @@
 layout: project
 title: Receding Horizon Milling Interface
 date: June 15, 2018
-image: mill.png
+image: mill_animated.gif
 permalink: "project-7.html"
 ---
 
@@ -34,7 +34,7 @@ The motivation underlying the construction of this project is to support the erg
 <!-- <iframe width="420" height="315" src="https://vimeo.com/306697325" frameborder="0" allowfullscreen></iframe> -->
 
 
-![Display Mode](../public/images/mill_sim.gif){: height="231px" width="300px"}
+<!-- ![Display Mode](../public/images/mill_sim.gif){: height="231px" width="300px"} -->
 
 
 The project is written in C++ and Python, with ROS being used for modularity and flexibility in communication between components.
