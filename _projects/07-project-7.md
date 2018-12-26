@@ -25,7 +25,7 @@ permalink: "project-7.html"
 ## Summary
 
 In this project I created a ROS package to provide computer vision based 
-<img src="./public/images/mill_animated.gif" alt="Animated Mill" height="480" width="640" />
+
 <img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="float: right;margin-right:auto; margin-right:auto;padding: 10px;"/>
 
 feedback control for an X-Carve CNC mill. The mill was configured to operate as a pen plotter accepting time controlled x, y, and z input. The package accepts trajectories from csv files or in a variety of ROS message formats, which it then parses into gcode and transmits to the mill to be executed.
