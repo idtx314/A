@@ -32,7 +32,7 @@ The motivation underlying the construction of this project is to support the erg
 
 [![Example Run](./public/images/example_run.png)](https://vimeo.com/306697325)
 
-<!-- <iframe width="420" height="315" src="https://vimeo.com/306697325" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BPGvnV0WLSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 <!-- ![Display Mode](../public/images/mill_sim.gif){: height="231px" width="300px"} -->
