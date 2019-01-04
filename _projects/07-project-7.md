@@ -20,6 +20,8 @@ permalink: "project-7.html"
 |||    Receding Horizon Control    |
 
 
+## Github Repo
+https://github.com/idtx314/mill_controller
 
 
 ## Summary
