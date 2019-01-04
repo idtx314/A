@@ -21,7 +21,7 @@ permalink: "project-7.html"
 
 
 ## Github Repo
-https://github.com/idtx314/mill_controller
+[https://github.com/idtx314/mill_controller](https://github.com/idtx314/mill_controller)
 
 
 ## Summary
