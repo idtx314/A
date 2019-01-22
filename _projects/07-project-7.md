@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Receding Horizon Milling Interface
+title: Receding Horizon CNC Interface
 date: June 15, 2018
 image: mill.png
 permalink: "project-7.html"
@@ -24,7 +24,7 @@ permalink: "project-7.html"
 [https://github.com/idtx314/mill_controller](https://github.com/idtx314/mill_controller)
 
 
-## Summary
+## Project Introduction
 
 <img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="float: right;margin-right:auto; padding: 10px;"/>
 In this project I created a ROS package to provide computer vision based feedback control for an X-Carve CNC mill. The mill was configured to operate as a pen plotter accepting time controlled x, y, and z input. The package accepts trajectories from csv files or in a variety of ROS message formats, which it then parses into gcode and transmits to the mill to be executed.
