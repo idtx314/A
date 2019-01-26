@@ -6,7 +6,7 @@ image: mill.png
 permalink: "project-7.html"
 ---
 
-## Overview
+## Header/ major project components
 
 |Components                     ||Concepts|
 |:------------------------------||:-----|
@@ -20,9 +20,9 @@ permalink: "project-7.html"
 |||    Receding Horizon Control    |
 
 
-## Header/ major project components
 
 ## Intro video/pictures
+<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="float: right;margin-right:auto; padding: 10px;"/>
 
 
 ## Github Repo
@@ -37,61 +37,45 @@ This page documents my contributions to this effort during the Spring and Fall o
 
 
 ## Hardware
-#### Talk about what I selected and why
-#### Milling/Printing Choice
+The experimental platform is based on an X-Carve CNC mill and X-Controller, all purchased as a kit from Inventables. I modified the platform by attaching an articulated arm to the back. The arm can be easily configured to reach various heights and mount a variety of sensors over the carving bed.
+
+<img src="./public/images/xcarve/platform_1.jpg" alt="X-Carve" width="500" style="padding: 10px;"/>
+
+#### Significant Design Choices
+###### Carving/Printing
+A mill was selected over alternative CNC platforms on the rationale that removing material would allow trajectories to be generated with the least constraint in the base scenario. This was in comparison to other methods like 3d printing, which would require that any trajectories produce a structurally stable product from nothing.
+###### Axis Count
+After researching available milling platforms, I selected a 3-axis X-Carve CNC system that was among the existing lab equipment rather than purchasing a full 5-axis system. The 3-axis system was expected to be significantly easier to control, and thus more suitable for an initial prototype. It was also immediately available, removing the need to order and assemble a new sysem.
+###### Sensor Selection
+A variety of cameras and depth cameras were examined while choosing the sensor for the platform. A Logitech C270 color USB camera was selected for use in the initial prototype, which only required color recognition. To accomodate the expected switch to a depth camera later in the project's development, I designed the image processing algorithms to work with point cloud data as well.
+###### Sensor Mounting
+A motorized camera mount was briefly considered to allow all relevant sides of the material to be imaged. Because mill systems that can carve more than one side of a material typically move the material rather than the end tool, I concluded that moving the camera would also be uneccesary.
+
+
 
 ## Software
-#### Why ROS, critical functions
-#### Trajectory Parsing
-#### Gcode Sending
-#### Image Processing
+The control software is designed as an interface between Ahalya's prototype trajectory generators and the experimental platform. To make future development as easy as possible, I prioritized modularity in the design.  
+Individual functions of the controller are split out into separate ROS nodes, which can be replaced or modified at will with little fear of compromising the rest of the system. This also permits any given node to be written in either Python or C++, granting access to the libraries and features available to both languages.  
+There are three primary functions: trajectory parsing, gcode sending, and image processing.
+
+<img src="./public/images/flowchart_project.png" alt="Full Chart" width="500" style="padding: 10px;"/>
+
+###### Trajectory Parsing
+<img src="./public/images/flowchart_trajectory_input.png" alt="Trajectory Nodes" width="500" style="padding: 10px;"/>
+To maximize ease of use with Ahalya's existing data formats, the system can parse a variety of input types into a 3 dimensional, time dependent trajectory. This data is then translated into a GRBL compatible G-code file for execution on the X-Controller.
+###### G-Code Sending
+<img src="./public/images/flowchart_gcode_sending.png" alt="GCode Nodes" width="500" style="padding: 10px;"/>
+The sending nodes communicate with the X-Controller through a serial over USB connection. After preparing the X-Carve for use, the sending node streams the G-Code file line by line and receives confirmations from the X-Controller. Streaming will continue until the trajectory ends or the time horizon has been exceeded.
+###### Vision Processing
+<img src="./public/images/flowchart_image_processing.png" alt="Vision Nodes" width="500" style="padding: 10px;"/>
+The vision processing nodes use OpenCV, the Point Cloud Library, and the Octomap library to process sensor data from a Logitech C270 USB camera into a variety of output formats. These outputs are a three dimensional representation of how the experiment material has changed as a result of the end-effector following the input trajectory. Ahalya's trajectory generation software can use this information to alter the planned trajectory for future timesteps in order to better achieve the intended final outcome.
+
+
 
 ## Future Development Outline
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="float: right;margin-right:auto; padding: 10px;"/>
-In this project I created a ROS package to provide computer vision based feedback control for an X-Carve CNC mill. The mill was configured to operate as a pen plotter accepting time controlled x, y, and z input. The package accepts trajectories from csv files or in a variety of ROS message formats, which it then parses into gcode and transmits to the mill to be executed.
-After running a trajectory for a given time period, the mill is instructed to stop operating and move the equipment away from the material. Images of the material are taken by a fixed usb camera and then processed to identify locations where the mill has drawn on the paper. This data is visualized in Rviz, and published to ROS topics in a variety of formats.  
-The published data can be used to determine how well the mill has performed in executing the trajectory so far, and what alterations to the planned trajectory are necessary to achieve the desired end result of the trajectory planner.  
-The motivation underlying the construction of this project is to support the ergodic trajectory research of Ahalya Prabhakar and the Neuroscience and Robotics Laboratory at Northwestern University. As part of the lab's ongoing mandate to explore neurology by implementing unusual behaviour in robotic platforms, Ahalya's research explores the remarkably life like results of using time sensitive x, y, and z trajectories to guide activities such as drawing and exploring. 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BPGvnV0WLSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-The project is written in C++ and Python, with ROS being used for modularity and flexibility in communication between components.
+* Reconfigure the software to operate as a state machine with a central control node and GUI.
+* Add color thresholding to the vision processing.
+* Add the end mill and configuring the machine for milling.
+* Replace the camera with a depth camera.
+* Complete the transition into 3D milling.
+* Automate imaging calibration process.
