@@ -39,7 +39,9 @@ This page documents my contributions to this effort during the Spring and Fall o
 ## Hardware
 The experimental platform is based on an X-Carve CNC mill and X-Controller, all purchased as a kit from Inventables. I modified the platform by attaching an articulated arm to the back. The arm can be easily configured to reach various heights and mount a variety of sensors over the carving bed.
 
-<img src="./public/images/xcarve/platform_1.jpg" alt="X-Carve" width="500" style="padding: 10px;"/>
+<a href="https://imgur.com/a/ksRTPUy?">
+    <img src="./public/images/xcarve/platform_1.jpg" alt="X-Carve" width="500" style="padding: 10px;"/>
+</a>
 
 #### Significant Design Choices
 ###### Carving/Printing
