@@ -26,12 +26,12 @@ permalink: "project-7.html"
     <img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" />
 </div>
 
-#container {
+container {
     height:100px;
     line-height:100px;
 }
 
-#container img {
+container img {
     vertical-align:middle;
     max-height:100%;
 }
