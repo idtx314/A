@@ -39,7 +39,7 @@ This page documents my contributions to this effort during the Spring and Fall o
 ## Hardware
 The experimental platform is based on an X-Carve CNC mill and X-Controller, all purchased as a kit from Inventables. I modified the platform by attaching an articulated arm to the back. The arm can be easily configured to reach various heights and mount a variety of sensors over the carving bed.
 
-<a href="https://imgur.com/a/ksRTPUy?">
+<a href="https://imgur.com/a/Qnw8pum">
     <img src="./public/images/xcarve/platform_1.jpg" alt="X-Carve" width="500" style="padding: 10px;border: 0;"/>
 </a>
 
@@ -60,16 +60,15 @@ The control software is designed as an interface between Ahalya's prototype traj
 Individual functions of the controller are split out into separate ROS nodes, which can be replaced or modified at will with little fear of compromising the rest of the system. This also permits any given node to be written in either Python or C++, granting access to the libraries and features available to both languages.  
 There are three primary functions: trajectory parsing, gcode sending, and image processing.
 
-<img src="./public/images/flowchart_project.png" alt="Full Chart" width="500" style="padding: 10px;"/>
+<a href="https://imgur.com/a/f9RgvEO" >
+    <img src="./public/images/flowchart_project.png" alt="Full Chart" width="500" style="padding: 10px;"/>
+</a>
 
 ###### Trajectory Parsing
-<img src="./public/images/flowchart_trajectory_input.png" alt="Trajectory Nodes" width="500" style="padding: 10px;"/>
 To maximize ease of use with Ahalya's existing data formats, the system can parse a variety of input types into a 3 dimensional, time dependent trajectory. This data is then translated into a GRBL compatible G-code file for execution on the X-Controller.
 ###### G-Code Sending
-<img src="./public/images/flowchart_gcode_sending.png" alt="GCode Nodes" width="500" style="padding: 10px;"/>
 The sending nodes communicate with the X-Controller through a serial over USB connection. After preparing the X-Carve for use, the sending node streams the G-Code file line by line and receives confirmations from the X-Controller. Streaming will continue until the trajectory ends or the time horizon has been exceeded.
 ###### Vision Processing
-<img src="./public/images/flowchart_image_processing.png" alt="Vision Nodes" width="500" style="padding: 10px;"/>
 The vision processing nodes use OpenCV, the Point Cloud Library, and the Octomap library to process sensor data from a Logitech C270 USB camera into a variety of output formats. These outputs are a three dimensional representation of how the experiment material has changed as a result of the end-effector following the input trajectory. Ahalya's trajectory generation software can use this information to alter the planned trajectory for future timesteps in order to better achieve the intended final outcome.
 
 
