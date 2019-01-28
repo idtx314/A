@@ -22,7 +22,7 @@ permalink: "project-7.html"
 
 
 ## Intro video/pictures
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ua0gecTH6jU" align="center" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ua0gecTH6jU" align="middle" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Github Repo
