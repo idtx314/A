@@ -22,7 +22,7 @@ permalink: "project-7.html"
 
 
 ## Intro video/pictures
-<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="float: right;margin-right:auto; padding: 10px;"/>
+<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="float: right;margin-right:auto;"/>
 
 
 ## Github Repo
