@@ -22,7 +22,7 @@ permalink: "project-7.html"
 
 
 ## Intro video/pictures
-<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="display: block; margin-left: auto; margin-right: auto;" />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ua0gecTH6jU" align="center" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Github Repo
