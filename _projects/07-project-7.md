@@ -22,7 +22,7 @@ permalink: "project-7.html"
 
 
 ## Intro video/pictures
-<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="display: block; margin-left: auto; margin-right: auto;"/>
+<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" style="display: block; margin-left: auto; margin-right: auto;" />
 
 
 ## Github Repo
@@ -40,7 +40,7 @@ This page documents my contributions to this effort during the Spring and Fall o
 The experimental platform is based on an X-Carve CNC mill and X-Controller, all purchased as a kit from Inventables. I modified the platform by attaching an articulated arm to the back. The arm can be easily configured to reach various heights and mount a variety of sensors over the carving bed.
 
 <a href="https://imgur.com/a/Qnw8pum">
-    <img src="./public/images/xcarve/platform_1.jpg" alt="X-Carve" width="500" style="padding: 10px;border: 0;"/>
+    <img src="./public/images/xcarve/platform_1.jpg" alt="X-Carve" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;border: 0;"/>
 </a>
 
 #### Significant Design Choices
@@ -61,7 +61,7 @@ Individual functions of the controller are split out into separate ROS nodes, wh
 There are three primary functions: trajectory parsing, gcode sending, and image processing.
 
 <a href="https://imgur.com/a/f9RgvEO" >
-    <img src="./public/images/flowchart_project.png" alt="Full Chart" width="500" style="padding: 10px;"/>
+    <img src="./public/images/flowchart_project.png" alt="Full Chart" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 </a>
 
 ###### Trajectory Parsing
