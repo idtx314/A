@@ -22,10 +22,12 @@ permalink: "project-3.html"
 
 <!--
 Todo:
-    Gif of the copter flying in section 1
-    Move chassis photo to section 2
-    Gif of copter testing in section 2
-    Not sure just what to put in section 3 yet
+    Restructure intro using motivation/goal/outcome model
+    Edit and embed youtube video
+    Add detailed hardware section
+    Add detailed software section
+    Add future work?
+    Reconfigure images and video appropriately. Produce some better gifs.
 -->
 
 
