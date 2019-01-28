@@ -22,8 +22,19 @@ permalink: "project-7.html"
 
 
 ## Intro video/pictures
-<img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" />
+<div id="container">
+    <img src="./public/images/mill_animated.gif" alt="Animated Mill" width="500" />
+</div>
 
+#container {
+    height:100px;
+    line-height:100px;
+}
+
+#container img {
+    vertical-align:middle;
+    max-height:100%;
+}
 
 ## Github Repo
 [https://github.com/idtx314/mill_controller](https://github.com/idtx314/mill_controller)
