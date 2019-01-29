@@ -20,8 +20,6 @@ permalink: "project-7.html"
 |||    Receding Horizon Control    |
 
 
-
-## Intro video/pictures
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ua0gecTH6jU" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 

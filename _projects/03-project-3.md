@@ -30,6 +30,8 @@ Todo:
     Reconfigure images and video appropriately. Produce some better gifs.
 -->
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VJnbBmU5wRM" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Project Summary
 
@@ -51,3 +53,5 @@ The quadcopter chassis was made of carbon fiber and steel parts, which were prov
 Code was written in C, with instructors providing low level initialization and management functions for the motors, vive, and controller. This allowed us to place our focus on higher level operation and control of the quadcopter itself. The control script calculates pitch and roll of the quadcopter using a complementary filter of accelerometer and integrated gyroscope data. PID controllers use that information to adjust motor speed as needed to maintain a target orientation. The target orientation is set by a weighted combination of the control input from the user and the output of more feedback control loops, which use positional data provided by the Vive sensors to adjust target orientation and negate horizontal drift.
 
 ![Chassis](../public/images/quad_joystick.gif)
+
+
