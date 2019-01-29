@@ -37,7 +37,7 @@ Todo:
 
 I undertook this project as the core of a graduate class, where I worked in a group with one other student. We assembled a small quadcopter from low cost materials and programmed flight control scripts to maintain orientation based on input from a third party video game controller. The quadcopter defaults to mixed-autonomy mode, in which it uses position data provided by a vive lighthouse to eliminate horizontal drift, while also being subject to manual control input from the user.
 
-![Chassis](../public/images/quad_demo.gif)
+<img src="./public/images/quadcopter/flight.gif" alt="A brief demonstration flight" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 This project was valuable experience in some of the dynamics of group projects, and marked one of my first attempts to work with an embedded microprocessor. It also coincided nicely with my study of feedback control, providing me with real-world examples of concepts that would otherwise have been very theory heavy.
 
@@ -52,6 +52,6 @@ The quadcopter chassis was made of carbon fiber and steel parts, which were prov
 
 Code was written in C, with instructors providing low level initialization and management functions for the motors, vive, and controller. This allowed us to place our focus on higher level operation and control of the quadcopter itself. The control script calculates pitch and roll of the quadcopter using a complementary filter of accelerometer and integrated gyroscope data. PID controllers use that information to adjust motor speed as needed to maintain a target orientation. The target orientation is set by a weighted combination of the control input from the user and the output of more feedback control loops, which use positional data provided by the Vive sensors to adjust target orientation and negate horizontal drift.
 
-![Chassis](../public/images/quad_joystick.gif)
+<img src="./public/images/quadcopter/control_test.gif" alt="Testing roll controls" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 
