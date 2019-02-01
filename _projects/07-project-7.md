@@ -2,7 +2,7 @@
 layout: project
 title: Receding Horizon CNC Interface
 date: June 15, 2018
-image: mill.png
+image: xcarve/mill.png
 permalink: "project-7.html"
 ---
 
