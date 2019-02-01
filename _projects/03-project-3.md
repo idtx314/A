@@ -28,7 +28,7 @@ Todo:
 
 ## Repository
 
-The project is written mostly in C. The final codebase is available on my github repository [here](https://github.com/idtx314/ME-495-Quadcopter).
+The project is written mostly in C. The final codebase is available on my github repository [here](https://github.com/idtx314/ME-495-Quadcopter).  
 
 ## Introduction
 
@@ -49,17 +49,17 @@ During development of the PID controllers for roll and pitch I also constructed 
 <img src="./public/images/quadcopter/control_test.gif" alt="Testing roll controls" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 ## Software
-The control software is written in C, and runs on a Raspberry Pi microcontroller with Linux installed. Low level motor control and communications are handled by pre-built functions and libraries. My own algorithms are responsible for the higher level system function, which consist of two main duties: Localization and Control.
-
-
+The control software is written in C, and runs on a Raspberry Pi microcontroller with Linux installed. Low level motor control and communications are handled by pre-built functions and libraries. My own algorithms are responsible for the higher level system function, which consist of two main duties: Localization and Control.  
 
 #### Localization
-The localization algorithms use sensor input to determine the position and orientation or the quadcopter. Pitch and roll are determined by combining onboard gyro and accelerometer data with a complementary filter. Approximate yaw rate is determined based on just the onboard gyro data. The position of the quadcopter in space and its absolute yaw is calculated by using data from the IR sensors and Vive Lighthouse. The timing of the Lighthouse's IR sweeps is recorded by the sensors. This data and the known geometric relationship between sensors is used by pre-built algorithms to determine the x, y, z, and theta of the sensor array in an inertial reference frame established relative to the Vive. All data collected by the localization algorithms is made available to be used by the control algorithms.
+The localization algorithms use sensor input to determine the position and orientation or the quadcopter. Pitch and roll are determined by combining onboard gyro and accelerometer data with a complementary filter. Approximate yaw rate is determined based on just the onboard gyro data. The position of the quadcopter in space and its absolute yaw is calculated by using data from the IR sensors and Vive Lighthouse. The timing of the Lighthouse's IR sweeps is recorded by the sensors. This data and the known geometric relationship between sensors is used by pre-built algorithms to determine the x, y, z, and theta of the sensor array in an inertial reference frame established relative to the Vive. All data collected by the localization algorithms is made available to be used by the control algorithms.  
 
 #### Control
 The control algorithms use the pose data provided by localization to determine input values for layers of PID controllers. The errors between the x, y, and absolute yaw of the quadcopter and a desired position and orientation are used in a set of level 1 PID controllers to determine desired control values for roll, pitch, and yaw rate. The desired roll, pitch, and yaw rate are weighted and combined with the most recent user input received over the wireless card. This allows the user to influence the quadcopter's controller, but not override it, an approach known as "mixed autonomy".  
 The combined roll, pitch, and yaw rate targets from the level 1 controllers are then compared to the actual values from localization to set the error in the level 2 PID controllers, whose output is weighted and combined to determine desired control values for individual motor duty cycles.  
-Control of the z-axis position is notably absent from these algorithms. Regulating the z-axis was a part of the original project goals, but we found that implementing this part of the controller compromised the stability of the x-axis and y-axis controllers. I believe this is a result of flaws in the control algorithms that make the calculations very sensitive to the execution time of the control loop. I noted these shortcomings as we built the controllers, but due to the time constraints of the project we elected to continue using the guidance provided in the course.
+Control of the z-axis position is notably absent from these algorithms. Regulating the z-axis was a part of the original project goals, but we found that implementing this part of the controller compromised the stability of the x-axis and y-axis controllers. I believe this is a result of flaws in the control algorithms that make the calculations very sensitive to the execution time of the control loop. I noted these shortcomings as we built the controllers, but due to the time constraints of the project we elected to continue using the guidance provided in the course.  
+
+<img src="./public/images/quadcopter/flight.gif" alt="A test flight" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 
 
