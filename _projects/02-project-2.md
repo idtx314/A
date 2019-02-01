@@ -29,15 +29,15 @@ The git repository for this project is available [here](https://github.com/Laure
 
 
 ## Introduction
-Coffee making is a necessary, but highly repetitive process. So when tasked with demonstrating our skills with the Robot Operating System (ROS) and robotics, my group of 4 students (Kashish Goyal, Lauren Hutson, Solomon Wiznitzer, and I) decided that we would automate the coffee making process.  
+Coffee making is a necessary, but highly repetitive process. So when tasked with demonstrating our skills with the Robot Operating System (ROS) and robotics, my group of 4 students (Kashish Goyal, Lauren Hutson, Solomon Wiznitzer, and I) decided that we would automate coffee making.  
 
-We selected the Baxter robot as the platform for our project. To bring the scope of the project in line with our time frame we set the goal of having Baxter operate a Keurig coffee maker and accompanying items like cups and pods. We set an additional goal of having the robot use visual processing to identify the objects in its workspace, allowing them to be placed anywhere.  
+To bring the scope of the project in line with our time frame we set the goal of having a robot operate a Keurig coffee maker and accompanying items like cups and pods. We set an additional goal of having the robot use visual processing to identify objects, allowing them to be placed anywhere in the workspace  
 
 Over the course of 2 weeks we used a combination of color recognition and AR tag tracking to accomplish object recognition, created nodes and services for trajectory planning and execution, tied our individual work together into a functioning whole, and presented our project to students and faculty.
 
 
 ## Hardware
-The Baxter robot was produced by Rethink Robotics for research and academic use. The platform consists of two arms and a swivel mounted "head", all three of which are equipped with a sensor suite including a color camera. The arms can mount a selection of grippers, and the robot's API is reasonably well documented by the manufacturer. Baxter was selected as the project platform both because it met all hardware requirements for the project and because it was the most likely to be available for use at any given time, allowing more freedom in development scheduling. The most significant drawback of the platform was that it used series elastic actuators, which are known to be less precise in their motions.  
+We selected the Baxter robot as the project platform both because it met all hardware requirements for the project and because it was the most likely of our potential platforms to be available for use at any given time, allowing more freedom in development scheduling. Baxter was produced by Rethink Robotics for research and academic use. The platform consists of two arms and a swivel mounted "head", all three of which are equipped with a sensor suite including a color camera. The arms can mount a selection of grippers, and the robot's API is reasonably well documented by the manufacturer. The most significant drawback of the platform was that it used series elastic actuators, which are known to be less precise in their motions.  
 
 <img src="./public/images/starbax/baxter2.jpg" alt="The Baxter robot" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
