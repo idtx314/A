@@ -19,21 +19,22 @@ permalink: "project-2.html"
 
 <!--
 Todo:
-    Add image:
     Get this project working on my station and collect images
     Get video of my section of the project working. I know can use and rely on it.  
-    Add details section?
 -->
+## Repository
+The git repository for this project is available [here](https://github.com/Laurenhut/ME495-final-project).
 
 
-## Project Overview
-This program was proposed and designed as a group project with 3 other students. Our design goal was have a Baxter robot operate a keurig coffeemaker and produce a cup of coffee, using visual processing to identify the position and orientation of items in the workspace. This would allow the system to work without rigidly defining the position of equipment and supplies.
+## Introduction
+Coffee making is a necessary, but highly repetitive process. So when tasked with demonstrating our skills with the Robot Operating System (ROS) and robotics, my group of 4 students (Kashish Goyal, Lauren Hutson, Solomon Wiznitzer, and I) decided that we would automate the coffee making process.  
 
-To facilitate our 2-week timeframe, we split the project into segments and each worked on a subset of the needed programming. I handled the code for manipulating the keurig lid and performing the start button press, and took lead on coordinating the final integration when I saw signs that it would be an issue.
+We selected the Baxter robot as the platform for our project. To bring the scope of the project in line with our time frame we set the goal of having Baxter operate a Keurig coffee maker and accompanying items like cups and pods. We set an additional goal of having the robot use visual processing to identify the objects in its workspace, allowing them to be placed anywhere.  
+
+Over the course of 2 weeks we used a combination of color recognition and AR tag tracking to accomplish object recognition, created nodes and services for trajectory planning and execution, tied our individual work together into a functioning whole, and presented our project to students and faculty.
 
 ![Chassis](../public/images/baxter_open.gif){: height="415px" width="300px"}
 
-The git repository for this project is available [here](https://github.com/Laurenhut/ME495-final-project).
 
 ## Implementation Summary
 The Baxter robot is a common research and academic platform produced by Rethink robotics that uses the highly modular Robot Operating System (ROS). To interact with Baxter we ran our own ROS code on a laptop and connected through SSH.
