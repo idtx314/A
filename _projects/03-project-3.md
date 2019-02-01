@@ -42,8 +42,8 @@ This project course was tackled in groups of two. Over a ten week period, Drew W
 The upper chassis is composed of a Raspberry Pi Zero, a PWM control board, a rechargeable LiPo battery, and a 3D printed plastic frame. I performed assembly of these components and attached them and a 6 axis IMU to the provided lower chassis, which includes a larger frame and 4 motors attached to an ESC board. A wireless network card and battery charge alarm are attached to the upper chassis and secured loosely. Communication between hardware components is handled using I2C protocol.  
 A quartet of infrared sensors is suspended above the upper chassis. These sensors detect regular IR sweeps broadcast by a Vive Lighthouse positioned above the flight volume. The IR data can be used to facilitate autonomous position holding.  
 
-<img src="./public/images/quadcopter/chassis.png" alt="Chassis Layout" style="display: inline-block; max-width: 50%; max-height: 50%;" />
-<img src="./public/images/quadcopter/quad2.jpg" alt="Finished quadcopter" style="display: inline-block; max-width: 50%; max-height: 50%;" />
+<img src="./public/images/quadcopter/chassis.png" alt="Chassis Layout" style="display: inline-block; max-width: 49%; max-height: 49%;" />
+<img src="./public/images/quadcopter/quad2.jpg" alt="Finished quadcopter" style="display: inline-block; max-width: 49%; max-height: 49%;" />
 
 During development of the PID controllers for roll and pitch I also constructed a 1 degree of freedom testing rig. This was extremely simple, consisting of clamps and plastic line suspending the quadcopter between two tables, but it worked admirably.  
 
