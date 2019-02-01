@@ -58,9 +58,9 @@ The Auxiliary control nodes provided ROS services responsible for motions direct
 These nodes used inverse kinematics to plan their motion, but I intentionally leveraged short motion distances and reference starting positions in order to avoid the circuitous joint trajectories often seen in IK planning.
 I chose to build the nodes as ROS service providers so that they could be easily integrated once we established an architecture for the control software. This also allowed me to take advantage of the call/wait behavior to ensure that the main control algorithm wasn't running ahead of Baxter's movements.
 
-![Chassis](../public/images/starbax/baxter_press.gif)
-![Chassis](../public/images/starbax/baxter_open.gif){: height="415px" width="300px"}
-![Chassis](../public/images/starbax/baxter_close.gif){: height="297px" width="300px"}
+<img src="./public/images/starbax/baxter_open.gif" alt="Lid Open" style="display: inline-block; max-width: 30%; max-height: 30%;" />
+<img src="./public/images/starbax/baxter_close.gif" alt="Lid Close" style="display: inline-block; max-width: 30%; max-height: 30%;" />
+<img src="./public/images/starbax/baxter_press.gif" alt="Button Press" style="display: inline-block; max-width: 30%; max-height: 30%;" />
 
 #### Vision Processor
 When called, the vision processing nodes were responsible for locating relevant objects in the workspace and reporting their positions back to the main control node for use in trajectory planning. These nodes used an arm camera to achieve an overhead view of the work space and a combination of color image processing with OpenCV and AR tag tracking to determine the location and identity of objects in relation to Baxter. This allowed items to be placed at positions that were not pre-determined, subject to the constraint that they had to be reachable.
