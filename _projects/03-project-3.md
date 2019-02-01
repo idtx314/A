@@ -22,8 +22,6 @@ permalink: "project-3.html"
 
 <!--
 Todo:
-    Restructure intro using motivation/goal/outcome model
-    Edit and embed youtube video
     Add detailed hardware section
     Add detailed software section
     Add future work?
@@ -32,17 +30,18 @@ Todo:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VJnbBmU5wRM" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-## Project Summary
-
-I undertook this project as the core of a graduate class, where I worked in a group with one other student. We assembled a small quadcopter from low cost materials and programmed flight control scripts to maintain orientation based on input from a third party video game controller. The quadcopter defaults to mixed-autonomy mode, in which it uses position data provided by a vive lighthouse to eliminate horizontal drift, while also being subject to manual control input from the user.
-
-<img src="./public/images/quadcopter/flight.gif" alt="A brief demonstration flight" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
-
-This project was valuable experience in some of the dynamics of group projects, and marked one of my first attempts to work with an embedded microprocessor. It also coincided nicely with my study of feedback control, providing me with real-world examples of concepts that would otherwise have been very theory heavy.
-
+## Repository
 
 The project is written mostly in C. The final codebase is available on my github repository [here](https://github.com/idtx314/ME-495-Quadcopter).
+
+## Introduction
+
+Quadcopters have become common platforms for research, industry, and leisure. Some of this ubiquity is surely due to their stability and ease of use, and it might suprise many to learn that these properties aren't inherent to the design. The eerie grace of a well designed quadcopter is actually a result of its intricate control algorithms, and building such a platform is an opportunity to learn about these algorithms first hand.
+The goal of this project is to assemble and program the control software for a small quadcopter that will respond to control input from the user, but hover in place when left to operate autonomously.
+This project course was tackled in groups of two. Over a ten week period, Drew Warren and I followed the guidance of the course material to produce an air worthy chassis and program control code that responded well to user input over a wireless network. Horizontal autonomous position holding was accomplished using fusion of onboard sensor data and positional information provided by a Vive lighthouse observing the flight.
+
+
+
 
 
 ## Implementation Summary
