@@ -43,7 +43,7 @@ The upper chassis is composed of a Raspberry Pi Zero, a PWM control board, a rec
 A quartet of infrared sensors is suspended above the upper chassis. These sensors detect regular IR sweeps broadcast by a Vive Lighthouse positioned above the flight volume. The IR data can be used to facilitate autonomous position holding.  
 
 <img src="./public/images/quadcopter/chassis.png" alt="Chassis Layout" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
-<img src="./public/images/quadcopter/quad.jpg" alt="Chassis Layout" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+<img src="./public/images/quadcopter/quad2.jpg" alt="Finished quadcopter" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 During development of the PID controllers for roll and pitch I also constructed a 1 degree of freedom testing rig. This was extremely simple, consisting of clamps and plastic line suspending the quadcopter between two tables, but it worked admirably.  
 
