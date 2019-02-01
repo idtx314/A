@@ -38,7 +38,7 @@ Over the course of 2 weeks we used a combination of color recognition and AR tag
 We selected the Baxter robot as the project platform both because it met all hardware requirements for the project and because it was the most likely of our potential platforms to be available for use at any given time, allowing more freedom in development scheduling.  
 Baxter was produced by Rethink Robotics for research and academic use. The platform consisted of two arms and a swivel mounted "head", all three of which were equipped with a sensor suite that included a color camera. The arms could mount a selection of grippers, and the robot's API was reasonably well documented by the manufacturer. The most significant drawback of the platform was that it used series elastic actuators, which are known to be less precise in their motions.  
 
-<img src="./public/images/starbax/baxter2.jpg" alt="The Baxter robot" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+<img src="./public/images/starbax/baxter2.jpg" alt="The Baxter robot" width="20%" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 With only two weeks to complete the project, it was decided to limit the scope of the problem where possible and then expand if time allowed. By using a Keurig single serve automatic coffee maker, the project outsourced some of the most complicated aspects of coffee making and was able to focus on a smaller set of motions and interactions.  
 
