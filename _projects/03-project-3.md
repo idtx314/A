@@ -49,7 +49,7 @@ During development of the PID controllers for roll and pitch I also constructed 
 <img src="./public/images/quadcopter/control_test.gif" alt="Testing roll controls" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 ## Software
-The control software is written in C, and runs on a Raspberry Pi microcontroller with Linux installed. Low level motor control and communications are handled by pre-built functions and libraries. My own algorithms are responsible for the higher level system function, which consists of two main duties: Localization and Control.  
+The control software is written in C, and runs on a Raspberry Pi microcontroller with Linux installed. Low level motor control and communications are handled by pre-built functions and libraries. My own algorithms are responsible for the higher level system functions, which consist of two main duties: Localization and Control.  
 
 #### Localization
 The localization algorithms use sensor input to determine the position and orientation or the quadcopter. Pitch and roll are determined by integrating data from the onboard gyro and combining it with data from the onboard accelerometer using a complementary filter. Alpha for the filter was determined experimentally. In my build, the gyro data is heavily favored. Approximate yaw rate is determined based on just the onboard gyro data.  
@@ -58,15 +58,15 @@ The position of the quadcopter in space and its absolute yaw is calculated by us
 #### Control
 The control algorithms use the pose data provided by localization to determine input values for layers of PID controllers. The errors between the x, y, and absolute yaw of the quadcopter and a reference position and orientation are used in a set of level 1 PID controllers to determine desired control values for roll, pitch, and yaw rate. The desired roll, pitch, and yaw rate are weighted and combined with user input received over the wireless card in a 50/50 ratio. This allows the user to influence the quadcopter's controller, but not override it, an approach known as "mixed autonomy".  
 The combined roll, pitch, and yaw rate targets from the user and the level 1 controllers are then compared to the actual roll, pitch, and yaw rate values from localization to set the error in the level 2 PID controllers, whose output is weighted and combined to determine desired control values for individual motor duty cycles.  
-Control of the z-axis position is notably absent from these algorithms. Regulating the z-axis was a part of the original project goals, but we found that implementing this part of the controller compromised the stability of the x-axis and y-axis controllers. I believe this is a result of flaws in the control algorithms that make the calculations very sensitive to the execution time of the control loop. I noted these shortcomings as we built the controllers and was able to reproduce the instability, but attempts to resolve the issue encountered unexpected difficulty and due to the time constraints of the project we elected to continue using the algorithms as described in the course material.  
+Control of the z-axis position is notably absent from these algorithms. Regulating the z-axis was a part of the original project goals, but we found that implementing this part of the controller compromised the stability of the parts responsible for x-axis and y-axis control. I believe this is a result of flaws in the control algorithms that make the calculations very sensitive to the execution time of the control loop. I noted these shortcomings as we built the controllers and was able to reproduce the instability, but attempts to resolve the issue encountered unexpected difficulty and due to the time constraints of the project we elected to continue using the algorithms as described in the course material.  
 
 <img src="./public/images/quadcopter/flight.gif" alt="A test flight" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 
 
 #### Future Work Draft
-* Improved control algorithms that properly account for execution time.
-* A more robust chassis with an improved center of mass.
+* Improve control algorithms to properly account for execution time.
+* Build a more robust chassis with a more reliable center of mass.
 * Install additional sensors and use them to reduce reliance on external sensors when determining yaw and position.
 * Implement more complex automated behavior, like flight path execution.
 * Implement automated landing and takeoff.
