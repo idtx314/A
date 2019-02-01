@@ -22,10 +22,6 @@ permalink: "project-3.html"
 
 <!--
 Todo:
-    Add detailed hardware section
-    Add detailed software section
-    Add future work?
-    Reconfigure images and video appropriately. Produce some better gifs.
 -->
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VJnbBmU5wRM" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -36,21 +32,43 @@ The project is written mostly in C. The final codebase is available on my github
 
 ## Introduction
 
-Quadcopters have become common platforms for research, industry, and leisure. Some of this ubiquity is surely due to their stability and ease of use, and it might suprise many to learn that these properties aren't inherent to the design. The eerie grace of a well designed quadcopter is actually a result of its intricate control algorithms, and building such a platform is an opportunity to learn about these algorithms first hand.
-The goal of this project is to assemble and program the control software for a small quadcopter that will respond to control input from the user, but hover in place when left to operate autonomously.
-This project course was tackled in groups of two. Over a ten week period, Drew Warren and I followed the guidance of the course material to produce an air worthy chassis and program control code that responded well to user input over a wireless network. Horizontal autonomous position holding was accomplished using fusion of onboard sensor data and positional information provided by a Vive lighthouse observing the flight.
+Quadcopters have become common platforms for research, industry, and leisure. Some of this ubiquity is surely due to their stability and ease of use, and it might suprise many to learn that these properties aren't inherent to the design. The eerie grace of a well made quadcopter is actually a result of its intricate control algorithms, and building such a platform is an opportunity to learn about these algorithms first hand.  
+The goal of this project is to assemble and program the control software for a small quadcopter that will respond to control input from the user, but hover in place when left to operate autonomously.  
+This project course was tackled in groups of two. Over a ten week period, Drew Warren and I followed the guidance of the course material to produce an air worthy chassis and program control code that responded well to user input over a wireless network. Horizontal autonomous position holding was accomplished using fusion of onboard sensor data and positional information provided by a Vive lighthouse observing the flight.  
 
 
+## Hardware
 
+The upper chassis is composed of a Raspberry Pi Zero, a PWM control board, a rechargeable LiPo battery, and a 3D printed plastic frame. I performed assembly of these components and attached them and a 6 axis IMU to the provided lower chassis, which includes a larger frame and 4 motors attached to an ESC board. A wireless network card and battery charge alarm are attached to the upper chassis and secured loosely. Communication between hardware components is handled using I2C protocol. 
+A quartet of infrared sensors is suspended above the upper chassis. These sensors detect regular IR sweeps broadcast by a Vive Lighthouse positioned above the flight volume. The IR data can be used to facilitate autonomous position holding.  
 
+<img src="./public/images/quadcopter/chassis.png" alt="Chassis Layout" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
-## Implementation Summary
-The quadcopter chassis was made of carbon fiber and steel parts, which were provided by the class. The electronics involved were an ESC board and a PWM board to regulate the motors, a Raspberry Pi Zero to control the assembly, a Lithium Polymer battery to power the drone, and a USB wireless card attached to the Pi so that we could send commands and data from a laptop over wireless SSH connection. A 9-axis IMU provided accelerometer and gyroscope data. A set of Vive sensors mounted on top of the quad allowed us to determine yaw and position in cartesian space based on signals from a lighthouse. User control was provided through a USB video game controller connected to the laptop.
-
-![Chassis](../public/images/Chassis.png){: height="224px" width="300px"}
-
-Code was written in C, with instructors providing low level initialization and management functions for the motors, vive, and controller. This allowed us to place our focus on higher level operation and control of the quadcopter itself. The control script calculates pitch and roll of the quadcopter using a complementary filter of accelerometer and integrated gyroscope data. PID controllers use that information to adjust motor speed as needed to maintain a target orientation. The target orientation is set by a weighted combination of the control input from the user and the output of more feedback control loops, which use positional data provided by the Vive sensors to adjust target orientation and negate horizontal drift.
+During development of the PID controllers for roll and pitch I also constructed a 1 degree of freedom testing rig. This was extremely simple, consisting of clamps and plastic line suspending the quadcopter between two tables, but it worked admirably.  
 
 <img src="./public/images/quadcopter/control_test.gif" alt="Testing roll controls" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+
+## Software
+The control software is written in C, and runs on a Raspberry Pi microcontroller with Linux installed. Low level motor control and communications are handled by pre-built functions and libraries. My own algorithms are responsible for the higher level system function, which consist of two main duties: Localization and Control.
+
+
+
+#### Localization
+The localization algorithms use sensor input to determine the position and orientation or the quadcopter. Pitch and roll are determined by combining onboard gyro and accelerometer data with a complementary filter. Approximate yaw rate is determined based on just the onboard gyro data. The position of the quadcopter in space and its absolute yaw is calculated by using data from the IR sensors and Vive Lighthouse. The timing of the Lighthouse's IR sweeps is recorded by the sensors. This data and the known geometric relationship between sensors is used by pre-built algorithms to determine the x, y, z, and theta of the sensor array in an inertial reference frame established relative to the Vive. All data collected by the localization algorithms is made available to be used by the control algorithms.
+
+#### Control
+The control algorithms use the pose data provided by localization to determine input values for layers of PID controllers. The errors between the x, y, and absolute yaw of the quadcopter and a desired position and orientation are used in a set of level 1 PID controllers to determine desired control values for roll, pitch, and yaw rate. The desired roll, pitch, and yaw rate are weighted and combined with the most recent user input received over the wireless card. This allows the user to influence the quadcopter's controller, but not override it, an approach known as "mixed autonomy".  
+The combined roll, pitch, and yaw rate targets from the level 1 controllers are then compared to the actual values from localization to set the error in the level 2 PID controllers, whose output is weighted and combined to determine desired control values for individual motor duty cycles.  
+Control of the z-axis position is notably absent from these algorithms. Regulating the z-axis was a part of the original project goals, but we found that implementing this part of the controller compromised the stability of the x-axis and y-axis controllers. I believe this is a result of flaws in the control algorithms that make the calculations very sensitive to the execution time of the control loop. I noted these shortcomings as we built the controllers, but due to the time constraints of the project we elected to continue using the guidance provided in the course.
+
+
+
+#### Future Work Draft
+* Improved control algorithms that properly account for execution time.
+* A more robust chassis with an improved center of mass.
+* Install additional sensors and use them to reduce reliance on external sensors when determining yaw and position.
+* Implement more complex automated behavior, like flight path execution.
+* Implement automated landing and takeoff.
+
 
 
