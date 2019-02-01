@@ -2,7 +2,7 @@
 layout: project
 title: Starbax Program for Baxter
 date: March 23, 2018
-image: baxter.jpg
+image: starbax/baxter.jpg
 permalink: "project-2.html"
 ---
 
@@ -22,6 +22,7 @@ Todo:
     Get this project working on my station and collect images
     Get video of my section of the project working. I know can use and rely on it.  
 -->
+
 ## Repository
 The git repository for this project is available [here](https://github.com/Laurenhut/ME495-final-project).
 
@@ -33,18 +34,17 @@ We selected the Baxter robot as the platform for our project. To bring the scope
 
 Over the course of 2 weeks we used a combination of color recognition and AR tag tracking to accomplish object recognition, created nodes and services for trajectory planning and execution, tied our individual work together into a functioning whole, and presented our project to students and faculty.
 
-![Chassis](../public/images/baxter_open.gif){: height="415px" width="300px"}
+
+## Hardware
+The Baxter robot was produced by Rethink Robotics for research and academic use. The platform consists of two arms and a swivel mounted "head", all three of which are equipped with a sensor suite including a color camera. The arms can mount a selection of grippers, and the robot's API is reasonably well documented by the manufacturer. Baxter was selected as the project platform both because it met all hardware requirements for the project and because it was the most likely to be available for use at any given time, allowing more freedom in development scheduling. The most significant drawback of the platform was that it used series elastic actuators, which are known to be less precise in their motions.  
+With only two weeks to complete the project, it was decided to limit the scope of the problem where possible and then expand if time allowed. By using a Keurig single serve automatic coffee maker, the project outsourced some of the most complicated aspects of coffee making and was able to focus on a smaller set of motions and interactions.  
 
 
-## Implementation Summary
-The Baxter robot is a common research and academic platform produced by Rethink robotics that uses the highly modular Robot Operating System (ROS). To interact with Baxter we ran our own ROS code on a laptop and connected through SSH.
-In order to facilitate integration of my code into the initially loosely defined structure of our overall progect I elected to create services for each of the actions I needed Baxter to perform. These services could then be called by my groupmates' code at the appropriate points in the program without any major modification being necessary to either set of code.
-In order to achieve what I needed to do with Baxter's end effector, I selected an appropriate grip width for the keurig gripper and verified that the fingers were both thin enough to press the button and far enough apart that the second finger would not encounter an obstacle during the press service.
 
-![Chassis](../public/images/baxter_press.gif)
+## Software
 
-I elected to use the inverse kinematic solver built into Baxter to perform all required movements for my task set. IK is notoriously unreliable for moving any distance in a controlled fashion, but by using set start positions for all three actions I was able to keep the commanded motions short enough that this unpredictability was not an issue.
 
-![Chassis](../public/images/baxter_close.gif){: height="297px" width="300px"}
 
-In order for the services to work regardless of where the keurig was in the workspace, all movement commands were translated from desired positions in the keurig's transformation frame relative to Baxter, with the keurig's pose being passed in as part of the service call. However, I found that in practice Baxter's work space was too small to accomodate some orientations. Since this was a physical limitation resulting from Baxter's dynamics I resolved the issue by creating a requirement that wherever it was on the table, the Keurig had to face Baxter.
+![Chassis](../public/images/starbax/baxter_press.gif)
+![Chassis](../public/images/starbax/baxter_open.gif){: height="415px" width="300px"}
+![Chassis](../public/images/starbax/baxter_close.gif){: height="297px" width="300px"}
