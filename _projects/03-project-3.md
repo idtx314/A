@@ -6,8 +6,6 @@ image: quadcopter/quad.jpg
 permalink: "project-3.html"
 ---
 
-## Overview
-
 |Components                     ||Concepts|
 |:------------------------------||:------|
 |    MPU-9250 9-Axis IMU    ||  PID Feedback Control  |
@@ -65,7 +63,7 @@ Control of the z-axis position is notably absent from these algorithms. Regulati
 
 
 
-#### Future Work Draft
+#### Future Work
 * Improve control algorithms to properly account for execution time.
 * Build a more robust chassis with a more reliable center of mass.
 * Install additional sensors and use them to reduce reliance on external sensors when determining yaw and position.
