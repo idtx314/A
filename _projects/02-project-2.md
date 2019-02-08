@@ -2,7 +2,7 @@
 layout: project
 title: Starbax Program for Baxter
 date: March 23, 2018
-image: starbax/baxter.jpg
+image: starbax/baxter.png
 permalink: "project-2.html"
 ---
 
