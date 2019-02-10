@@ -28,10 +28,8 @@ permalink: "project-7.html"
 
 
 ## Project Introduction
-The motion of robots is generally stiff and repetitive, often carried out with little regard for the current context of the machine. The reasons for this are rooted in the way that robotic motion plans are generated and executed. Most motion planners generate trajectories using very formulaic algorithms. Robots execute those trajectories very rigidly by matching specific positions at specific times, often blindly and with no sense of an underlying goal.
-In an effort to improve this situation and produce more adaptive, even graceful robots, Ahalya Prabhakar carries out research on novel methods of information based trajectory generation and receding horizon control systems that can modify planned motions based on the success of preceding ones. 
-After promising studies carried out with two dimensional systems, Ahalya now wants to begin performing experiments with a three dimensional platform. The goal of this ongoing project is to build her that platform.  
-This page documents my contributions to this effort during the Spring and Fall of 2018. By the end of my time on the project I had outlined a two dimensional "Phase 1" of project development, constructed an experimental platform, built a simulator element, developed the receding horizon control software, and produced documentation on installation and operation so that future students can continue to develop the project into a full fledged three dimensional experiment platform.
+On this project I worked with researchers to produce a project outline, built a trajectory execution simulator, designed and built a research platform, created a modular feedback control program and computer vision processor that was capable of receding horizon control, coordinated control interfaces with researchers, built a GUI, and extensively documented the system and appropriate usage.  
+The project was undertaken to support the research of Ahalya Prabhakar, who studies information based trajectory generation and receding horizon control systems with the goal of producing more adaptive, graceful robots.  
 
 
 ## Hardware
