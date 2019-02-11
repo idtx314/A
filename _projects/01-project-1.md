@@ -7,16 +7,14 @@ permalink: "project-1.html"
 ---
 
 
-|Components                     ||Concepts|
-|:------------------------------||:-----|
-|    MPU-9250 9-Axis IMU     ||ROS|
-|    DRV-2605L Haptic Driver  ||    Embedded Microprocessors  |
-|    BOB-12009 Logic Level Converter      ||    I2C and Serial Communications  |
-|    Redboard Arduino       ||    IMU operation  |
-|                               ||    Drivers and Vibrotactors  |
-|||    Python  |
-||| Soldering  |
-|||  3D Modeling and Printing  |
+|Key Skills & Tools                 ||                          |
+|:----------------------------------||:-------------------------|
+|IMU (MPU-9250)                     ||ROS                       |
+|Motor Driver (DRV-2605L)           ||Microprocessor (Arduino)  |
+|Logic Level Converter (BOB-12009)  ||I2C                       |
+|Serial                             ||Electronics               |
+|Python                             ||Mechatronics              |
+|CAD (Onshape)                      ||3D Printing               |
 
 
 

@@ -7,12 +7,11 @@ permalink: "project-2.html"
 ---
 
 
-|Components                     ||Concepts|
-|:------------------------------||:----------------------|
-|Rethink Robotics Baxter robot  || ROS                   |
-|Keurig Coffeemaker             || Python                |
-|Assorted cups and k-cups       || Trajectory Planning   |
-|                               || Group coordination    |
+|Key Skills & Tools  ||                    |
+|:-------------------||:-------------------|
+|Baxter              ||Inverse Kinematics  |
+|ROS                 ||Python              |
+|Group Work          ||Computer Vision     |
 
 
 

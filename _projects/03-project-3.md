@@ -6,15 +6,14 @@ image: quadcopter/quad.jpg
 permalink: "project-3.html"
 ---
 
-|Components                     ||Concepts|
-|:------------------------------||:------|
-|    MPU-9250 9-Axis IMU    ||  PID Feedback Control  |
-|    PWM Board  ||    Embedded Microprocessors  |
-|    ERC      ||    Motor Control  |
-|    Raspberry Pi Zero    ||    Feedback Based Position and Orientation Control  |
-|                               ||  3D Position Data  |
-|||    C Programming  |
-|||  Group Workflow and Project Management  |
+|Key Skills & Tools           ||                    |
+|:----------------           -||:-------------------|
+|IMU (MPU-9250)               ||  PID Control       |
+|Motor Control                ||  C                 |
+|Microprocessor (Raspberry Pi)||  Group Work        |
+|SSH                          ||  Electronics       |
+|Sensor Fusion                ||  State Estimation  |
+|Feedback Control             ||  Mechatronics      |
 
 
 

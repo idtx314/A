@@ -6,16 +6,15 @@ image: xcarve/mill.png
 permalink: "project-7.html"
 ---
 
-|Components                     ||Concepts|
-|:------------------------------||:-----|
-|    grbl Controller     ||    Linux    |
-|    Laptop  ||    Embedded Microprocessors    |
-|    USB Camera      ||    ROS    |
-|    X-Carve Mill       ||    Computer Vision    |
-|                               ||    C++, Python    |
-|||    Rviz    |
-|||    GCode    |
-|||    Receding Horizon Control    |
+|Key Skills & Tools  ||                          |
+|:-------------------||:-------------------------|
+|GRBL                ||Microprocessors           |
+|Linux               ||ROS                       |
+|CNC                 ||Computer Vision           |
+|C++                 ||Rviz                      |
+|Python              ||Receding Horizon Control  |
+|GCode               ||CAD (Onshape)             |
+|Feedback Control    ||                          |
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ua0gecTH6jU" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
