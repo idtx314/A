@@ -17,7 +17,7 @@ permalink: "project-3.html"
 |||  Group Workflow and Project Management  |
 
   
-  
+
 
 <!--
 Todo:
@@ -26,18 +26,15 @@ Todo:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VJnbBmU5wRM" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Repository
-
 The project is written mostly in C. The final codebase is available on my github repository [here](https://github.com/idtx314/ME-495-Quadcopter).  
 
 ## Introduction
-
 Quadcopters have become common platforms for research, industry, and leisure. Some of this ubiquity is surely due to their stability and ease of use, and it might suprise many to learn that these properties aren't inherent to the design. The eerie grace of a well made quadcopter is actually a result of its intricate control algorithms, and building such a platform is an opportunity to learn about these algorithms first hand.  
 The goal of this project is to assemble a small quadcopter and program control software that will respond to control input from the user, but hover in place when left to operate autonomously.  
 This project course was tackled in groups of two. Over a ten week period, Drew Warren and I followed the guidance of the course material to produce an air worthy chassis and program control code that responded well to user input over a wireless network. Horizontal autonomous position holding was accomplished using fusion of onboard sensor data and positional information provided by a Vive lighthouse observing the flight.  
 
 
 ## Hardware
-
 The upper chassis is composed of a Raspberry Pi Zero, a PWM control board, a rechargeable LiPo battery, and a 3D printed plastic frame. I performed assembly of these components and attached them and a 6 axis IMU to the provided lower chassis, which includes a larger frame and 4 motors attached to an ESC board. A wireless network card and battery charge alarm are attached to the upper chassis and secured loosely. Communication between hardware components is handled using I2C protocol.  
 A quartet of infrared sensors is suspended above the upper chassis. These sensors detect regular IR sweeps broadcast by a Vive Lighthouse positioned above the flight volume. The IR data can be used to facilitate autonomous position holding.  
 
