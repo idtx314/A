@@ -6,7 +6,6 @@ image: glove_prototype.jpg
 permalink: "project-1.html"
 ---
 
-## Overview
 
 |Components                     ||Concepts|
 |:------------------------------||:-----|

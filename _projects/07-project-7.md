@@ -6,8 +6,6 @@ image: xcarve/mill.png
 permalink: "project-7.html"
 ---
 
-## Header/ major project components
-
 |Components                     ||Concepts|
 |:------------------------------||:-----|
 |    grbl Controller     ||    Linux    |

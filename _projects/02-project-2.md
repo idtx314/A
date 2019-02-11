@@ -6,7 +6,6 @@ image: starbax/baxter.png
 permalink: "project-2.html"
 ---
 
-## Overview
 
 |Components                     ||Concepts|
 |:------------------------------||:----------------------|

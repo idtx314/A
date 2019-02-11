@@ -6,7 +6,6 @@ image: motor_controller.png
 permalink: "project-4.html"
 ---
 
-## Overview
 
 |Components                     ||Concepts|
 |:------------------------------||:----------------------|
