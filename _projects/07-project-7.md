@@ -67,6 +67,7 @@ The vision processing nodes use OpenCV, the Point Cloud Library, and the Octomap
 
 
 ## Relevant Links
+* Robot Operating System: http://www.ros.org/
 * The Point Cloud Library: http://www.pointclouds.org/
 * Octomap: http://octomap.github.io/
 * OpenCV: https://opencv.org/
