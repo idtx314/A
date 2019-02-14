@@ -64,3 +64,10 @@ The sending nodes communicate with the X-Controller through a serial over USB co
 ###### Vision Processing
 The vision processing nodes use OpenCV, the Point Cloud Library, and the Octomap library to process sensor data from a Logitech C270 USB camera into a variety of output formats. These outputs are a three dimensional representation of how the experiment material has changed as a result of the end-effector following the input trajectory. Ahalya's trajectory generation software can use this information to alter the planned trajectory for future timesteps in order to better achieve the intended final outcome.
 
+
+
+## Relevant Links
+* The Point Cloud Library: http://www.pointclouds.org/
+* Octomap: http://octomap.github.io/
+* OpenCV: https://opencv.org/
+* Prabhakar, A., A. Mavrommati, J. A. Schultz, and T. D. Murphey, "Autonomous Visual Rendering using Physical Motion", Workshop on the Algorithmic Foundations in Robotics (WAFR) 2016, 2016.
