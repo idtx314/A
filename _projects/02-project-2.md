@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Starbax Program for Baxter
+title: CoffeeBot for Baxter
 date: March 23, 2018
 image: starbax/baxter.png
 permalink: "project-2.html"
