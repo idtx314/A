@@ -22,7 +22,10 @@ permalink: "project-7.html"
 
 ## Github Repo
 [https://github.com/idtx314/mill_controller](https://github.com/idtx314/mill_controller)
-
+<br/>
+<br/>
+<br/>
+<br/>
 
 ## Project Introduction
 On this project I worked with researchers to produce a project outline, built a trajectory execution simulator, designed and built a research platform, created a modular feedback control program and computer vision processor that was capable of receding horizon control, coordinated control interfaces with researchers, built a GUI, and extensively documented the system and appropriate usage.  
