@@ -7,6 +7,11 @@ permalink: "project-8.html"
 ---
 
 
+<!-- 
+TODO:
+    Add some writing/media on the extra functions we played with
+-->
+
 |Key Skills & Tools         ||                           |
 |:--------------------------||:--------------------------|
 |Programming (C)            ||Programming (Java)         |
@@ -40,11 +45,11 @@ I designed and fabricated the components for the drone chassis from scratch with
 #### Electronics
 The onboard electronics for this project consisted of a custom PCB for a PIC32 microprocessor and mounted motor driver shield; off the shelf circuit components, motors, and wiring; a 6V rechargeable LiPo battery; and a Moto G cell phone running the Android operating system.  
 
-<img src="./public/images/line/complete_circuit" alt="Breadboard" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+<img src="./public/images/line/complete_circuit.jpg" alt="Breadboard" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 I designed the microprocessor PCB in Autodesk Eagle to greatly and cheaply reduce the size and wiring complexity of using the PIC32 for motor control on this project.  
 
-<img src="./public/images/line/pcb_schematic" alt="PCB Schematics" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+<img src="./public/images/line/pcb_schematic.png" alt="PCB Schematics" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 <img src="./public/images/line/board_schematic.png" alt="Board Diagram" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 The Moto G provided all the electronics necessary to perform image processing and provide the PIC32 circuit board with power and data using a USB OTG connection.  
