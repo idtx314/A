@@ -41,18 +41,18 @@ The experimental platform is based on an X-Carve CNC mill and X-Controller, all 
 </a>
 
 #### Significant Design Choices
-##### Carving/Printing
-A mill was selected over alternative CNC platforms on the rationale that removing material would allow trajectories to be generated with the least constraint in the base scenario. This was in comparison to other methods like 3d printing, which would require that any trajectories produce a structurally stable product from nothing.
+>##### Carving/Printing
+>A mill was selected over alternative CNC platforms on the rationale that removing material would allow trajectories to be generated with the least constraint in the base scenario. This was in comparison to other methods like 3d printing, which would require that any trajectories produce a structurally stable product from nothing.
 <br />
 <br />
 
-##### Axis Count
-After researching available milling platforms, I selected a 3-axis X-Carve CNC system that was among the existing lab equipment rather than purchasing a full 5-axis system. The 3-axis system was expected to be significantly easier to control, and thus more suitable for an initial prototype. It was also immediately available, removing the need to order and assemble a new sysem.
+>##### Axis Count
+>After researching available milling platforms, I selected a 3-axis X-Carve CNC system that was among the existing lab equipment rather than purchasing a full 5-axis system. The 3-axis system was expected to be significantly easier to control, and thus more suitable for an initial prototype. It was also immediately available, removing the need to order and assemble a new sysem.
 <br />
 <br />
 
-##### Sensor Selection
-A variety of cameras and depth cameras were examined while choosing the sensor for the platform. A Logitech C270 color USB camera was selected for use in the initial prototype, which only required color recognition. To accomodate the expected switch to a depth camera later in the project's development, I designed the image processing algorithms to work with point cloud data as well.
+>##### Sensor Selection
+>A variety of cameras and depth cameras were examined while choosing the sensor for the platform. A Logitech C270 color USB camera was selected for use in the initial prototype, which only required color recognition. To accomodate the expected switch to a depth camera later in the project's development, I designed the image processing algorithms to work with point cloud data as well.
 <br />
 <br />
 
