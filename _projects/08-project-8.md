@@ -11,7 +11,6 @@ TODO:
     Add some writing/media on the extra functions we played with
 -->
 
-<!-- Tags and Video -->
 |Key Skills & Tools         ||                           |
 |:--------------------------||:--------------------------|
 |Programming (C)            ||Programming (Java)         |
