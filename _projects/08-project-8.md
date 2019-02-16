@@ -1,9 +1,3 @@
-<!-- 
-TODO:
-    Add some writing/media on the extra functions we played with
--->
-
-<!-- Header -->
 ---
 layout: project
 title: Line Following Drone
@@ -11,6 +5,11 @@ date: May 25, 2018
 image: line/beauty_shot.jpg
 permalink: "project-8.html"
 ---
+
+<!-- 
+TODO:
+    Add some writing/media on the extra functions we played with
+-->
 
 <!-- Tags and Video -->
 |Key Skills & Tools         ||                           |
