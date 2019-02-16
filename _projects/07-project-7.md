@@ -57,7 +57,7 @@ Individual functions of the controller are split out into separate ROS nodes, wh
 There are three primary functions: trajectory parsing, gcode sending, and image processing.
 
 <a href="https://imgur.com/a/f9RgvEO" >
-    <img src="./public/images//xcarve/flowchart_project.png" alt="Full Chart" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+    <img src="./public/images/xcarve/flowchart_project.png" alt="Full Chart" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 </a>
 
 ###### Trajectory Parsing
