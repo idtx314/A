@@ -22,14 +22,16 @@ permalink: "project-7.html"
 
 ## Github Repo
 [https://github.com/idtx314/mill_controller](https://github.com/idtx314/mill_controller)
+<br />
+<br />
+<br />
 
-<br/>
-<br/>
 ## Project Introduction
 On this project I worked with researchers to produce a project outline, built a trajectory execution simulator, designed and built a research platform, created a modular feedback control program and computer vision processor that was capable of receding horizon control, coordinated control interfaces with researchers, built a GUI, and extensively documented the system and appropriate usage.  
-The project was undertaken to support the research of Ahalya Prabhakar, who studies information based trajectory generation and receding horizon control systems with the goal of producing more adaptive, graceful robots.  
-<br/>
-<br/>
+The project was undertaken to support the research of Ahalya Prabhakar, who studies information based trajectory generation and receding horizon control systems with the goal of producing more adaptive, graceful robots.
+<br />
+<br />
+<br />
 
 ## Hardware
 The experimental platform is based on an X-Carve CNC mill and X-Controller, all purchased as a kit from Inventables. I modified the platform by attaching an articulated arm to the back. The arm can be easily configured to reach various heights and mount a variety of sensors over the carving bed.
@@ -49,6 +51,8 @@ A variety of cameras and depth cameras were examined while choosing the sensor f
 A motorized camera mount was briefly considered to allow all relevant sides of the material to be imaged. Because mill systems that can carve more than one side of a material typically move the material rather than the end tool, I concluded that moving the camera would also be uneccesary.
 <br/>
 <br/>
+<br/>
+
 ## Software
 The control software is designed as an interface between prototype trajectory generators and the experimental platform. To make future development as easy as possible, I prioritized modularity in the design.  
 Individual functions of the controller are split out into separate ROS nodes, which can be replaced or modified at will with little fear of compromising the rest of the system. This also permits any given node to be written in either Python or C++, granting access to the libraries and features available to both languages.  
@@ -64,8 +68,9 @@ To maximize ease of user input, the system can parse a variety of input types in
 The sending nodes communicate with the X-Controller through a serial over USB connection. After preparing the X-Carve for use, the sending node streams the G-Code file line by line and receives confirmations from the X-Controller. Streaming will continue until the trajectory ends or the time horizon has been exceeded.
 ###### Vision Processing
 The vision processing nodes use OpenCV, the Point Cloud Library, and the Octomap library to process sensor data from a Logitech C270 USB camera into a variety of output formats. These outputs are a three dimensional representation of how the experiment material has changed as a result of the end-effector following the input trajectory. Experimental trajectory generation software can use this information to alter the planned trajectory for future timesteps in order to better achieve the intended final outcome.
-
-
+<br />
+<br />
+<br />
 
 ## Relevant Links
 * Robot Operating System: http://www.ros.org/
