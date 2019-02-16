@@ -9,7 +9,7 @@ layout: project
 title: Line Following Drone
 date: May 25, 2018
 image: line/beauty_shot.jpg
-permalink: "project-3.html"
+permalink: "project-8.html"
 ---
 
 <!-- Tags and Video -->
