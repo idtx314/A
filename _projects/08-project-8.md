@@ -1,6 +1,6 @@
 <!-- 
 TODO:
-    Add images
+    Add some writing/media on the extra functions we played with
 -->
 
 <!-- Header -->
@@ -21,7 +21,9 @@ permalink: "project-3.html"
 |Feedback Control (PID)     ||Electronics                |
 |3D Printing                ||Laser Cutting              |
 |Communications (Serial)    ||Communications (USB)       |
-|App Development (Android)  ||                           |
+|Communications (SPI)       ||Communications (I2C)       |
+|Android Studio             ||MPLAB Harmony              |
+|IMU                        ||                           |
 
 
 
@@ -30,7 +32,7 @@ permalink: "project-3.html"
 
 
 ## Introduction
-On this project I designed a chassis using CAD modeling, 3D printing, and laser cutting; designed a PCB for a PIC32 microprocessor using Autodesk Eagle and soldered components into place; created a program in Java to run on an Android phone and locate a red line with the onboard camera; created a program in C to run on the PIC32 and use the location of that red line to apply PID control to individual wheel motors in order to make the drone follow the line; experimented with a number of potentially useful components, including making a custom HID mouse based on IMU readings, using an LCD display for various data output, and reading to and from SPI and I2C expansion chips to make more communications ports available.  
+On this project I designed a chassis using CAD modeling, 3D printing, and laser cutting; designed a PCB for a PIC32 microprocessor using Autodesk Eagle and soldered components into place; created a program in Java to run on an Android phone and locate a red line with the onboard camera; created a program in C to run on the PIC32 and use the location of that red line to apply PID control to individual wheel motors in order to make the drone follow the line; experimented with a number of potentially useful components, including making a custom HID mouse based on IMU readings, using an LCD display for various data output functions, and reading to and from SPI and I2C expansion chips to make more communications ports available.  
 
 
 ## Hardware
