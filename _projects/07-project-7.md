@@ -80,7 +80,7 @@ There are three primary functions: trajectory parsing, gcode sending, and image 
 >The sending nodes communicate with the X-Controller through a serial over USB connection. After preparing the X-Carve for use, the sending node streams the G-Code file line by line and receives confirmations from the X-Controller. Streaming will continue until the trajectory ends or the time horizon has been exceeded.
 ><br />
 ><br />
-
+>
 >#### Vision Processing
 >The vision processing nodes use OpenCV, the Point Cloud Library, and the Octomap library to process sensor data from a Logitech C270 USB camera into a variety of output formats. These outputs are a three dimensional representation of how the experiment material has changed as a result of the end-effector following the input trajectory. Experimental trajectory generation software can use this information to alter the planned trajectory for future timesteps in order to better achieve the intended final outcome.
 <br />
