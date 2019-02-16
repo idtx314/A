@@ -42,7 +42,9 @@ The experimental platform is based on an X-Carve CNC mill and X-Controller, all 
 
 #### Significant Design Choices
 >##### Carving/Printing
->A mill was selected over alternative CNC platforms on the rationale that removing material would allow trajectories to be generated with the least constraint in the base scenario. This was in comparison to other methods like 3d printing, which would require that any trajectories produce a structurally stable product from nothing.
+<blockquote>
+A mill was selected over alternative CNC platforms on the rationale that removing material would allow trajectories to be generated with the least constraint in the base scenario. This was in comparison to other methods like 3d printing, which would require that any trajectories produce a structurally stable product from nothing.
+</blockquote>
 <br />
 <br />
 
