@@ -28,7 +28,8 @@ permalink: "project-7.html"
 ## Project Introduction
 On this project I worked with researchers to produce a project outline, built a trajectory execution simulator, designed and built a research platform, created a modular feedback control program and computer vision processor that was capable of receding horizon control, coordinated control interfaces with researchers, built a GUI, and extensively documented the system and appropriate usage.  
 The project was undertaken to support the research of Ahalya Prabhakar, who studies information based trajectory generation and receding horizon control systems with the goal of producing more adaptive, graceful robots.  
-
+<br/>
+<br/>
 
 ## Hardware
 The experimental platform is based on an X-Carve CNC mill and X-Controller, all purchased as a kit from Inventables. I modified the platform by attaching an articulated arm to the back. The arm can be easily configured to reach various heights and mount a variety of sensors over the carving bed.
@@ -46,9 +47,8 @@ After researching available milling platforms, I selected a 3-axis X-Carve CNC s
 A variety of cameras and depth cameras were examined while choosing the sensor for the platform. A Logitech C270 color USB camera was selected for use in the initial prototype, which only required color recognition. To accomodate the expected switch to a depth camera later in the project's development, I designed the image processing algorithms to work with point cloud data as well.
 ###### Sensor Mounting
 A motorized camera mount was briefly considered to allow all relevant sides of the material to be imaged. Because mill systems that can carve more than one side of a material typically move the material rather than the end tool, I concluded that moving the camera would also be uneccesary.
-
-
-
+<br/>
+<br/>
 ## Software
 The control software is designed as an interface between prototype trajectory generators and the experimental platform. To make future development as easy as possible, I prioritized modularity in the design.  
 Individual functions of the controller are split out into separate ROS nodes, which can be replaced or modified at will with little fear of compromising the rest of the system. This also permits any given node to be written in either Python or C++, granting access to the libraries and features available to both languages.  

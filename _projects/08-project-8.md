@@ -6,7 +6,11 @@ image: line/beauty_shot.png
 permalink: "project-8.html"
 ---
 
-<!-- NO, TABLE. -->
+<!-- 
+TODO:
+    Add some writing/media on the extra functions we played with
+-->
+
 |Key Skills & Tools         ||                           |
 |:--------------------------||:--------------------------|
 |Programming (C)            ||Programming (Java)         |
@@ -19,10 +23,6 @@ permalink: "project-8.html"
 |Android Studio             ||MPLAB Harmony              |
 |IMU                        ||                           |
 
-<!-- 
-TODO:
-    Add some writing/media on the extra functions we played with
--->
 
 ## Repository
 [https://github.com/](https://github.com/idtx314/ME433-Advanced-Mechatronics)
