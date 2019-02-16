@@ -39,11 +39,21 @@ Hardware components for this project are divided into the drone's chassis and it
 #### Chassis
 I designed and fabricated the components for the drone chassis from scratch with compactness and visual appeal as primary concerns. Three mounting plates provide locations to affix electronics and components. These are made of acrylic plastic and were produced on a laser cutter. Wheels, brackets, and support elements are 3D printed from PLA plastic. All CAD modeling for these components was done in Onshape, an online sister product of Solidworks. One plastic spoon provides a low friction contact point with the ground to allow for motion using only two wheels. By using a multi-level chassis I was able to produce ample space for mounting components while maintaining a small footprint and an aesthetically pleasing design.  
 
+<img src="./public/images/line/cad_assembly.png" alt="CAD Assembly" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+
 #### Electronics
 The onboard electronics for this project consisted of a custom PCB for a PIC32 microprocessor and mounted motor driver shield; off the shelf circuit components, motors, and wiring; a 6V rechargeable LiPo battery; and a Moto G cell phone running the Android operating system.  
+
+<img src="./public/images/line/complete_circuit" alt="Breadboard" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+
 I designed the microprocessor PCB in Autodesk Eagle to greatly and cheaply reduce the size and wiring complexity of using the PIC32 for motor control on this project.  
+
+<img src="./public/images/line/pcb_schematic" alt="PCB Schematics" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+<img src="./public/images/line/board_schematic.png" alt="Board Diagram" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+
 The Moto G provided all the electronics necessary to perform image processing and provide the PIC32 circuit board with power and data using a USB OTG connection.  
 Power for the motors was provided by the 6V battery routed through the motor control shield.  
+
 
 
 ## Software
