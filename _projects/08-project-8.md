@@ -47,8 +47,8 @@ The onboard electronics for this project consisted of a custom PCB for a PIC32 m
 
 I designed the microprocessor PCB in Autodesk Eagle to greatly and cheaply reduce the size and wiring complexity of using the PIC32 for motor control on this project.  
 
-<img src="./public/images/line/pcb_schematic.png" alt="PCB Schematics" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
-<img src="./public/images/line/board_schematic.png" alt="Board Diagram" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+<img src="./public/images/line/pcb_schematic.png" alt="PCB Schematics" style="display: inline-block; max-width: 49%; max-height: 49%;" />
+<img src="./public/images/line/board_schematic.png" alt="Board Diagram" style="display: inline-block; max-width: 49%; max-height: 49%;" />
 
 The Moto G provided all the electronics necessary to perform image processing and provide the PIC32 circuit board with power and data using a USB OTG connection.  
 Power for the motors was provided by the 6V battery routed through the motor control shield.  
