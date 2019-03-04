@@ -15,7 +15,7 @@ TODO:
 |:--------------------------||:--------------------------|
 |Programming (C)            ||Programming (Java)         |
 |Autodesk Eagle             ||CAD (Onshape)              |
-|Motor Control              ||Microprocessors (PIC32)    |
+|Motor Control              ||Microcontrollers (PIC32)   |
 |Feedback Control (PID)     ||Electronics                |
 |3D Printing                ||Laser Cutting              |
 |Communications (Serial)    ||Communications (USB)       |
@@ -29,7 +29,7 @@ TODO:
 
 
 ## Introduction
-On this project I designed a chassis using CAD modeling, 3D printing, and laser cutting; designed a PCB for a PIC32 microprocessor using Autodesk Eagle and soldered components into place; created a program in Java to run on an Android phone and locate a red line with the onboard camera; created a program in C to run on the PIC32 and use the location of that red line to apply PID control to individual wheel motors in order to make the drone follow the line; experimented with a number of potentially useful components, including making a custom HID mouse based on IMU readings, using an LCD display for various data output functions, and reading to and from SPI and I2C expansion chips to make more communications ports available.  
+On this project I designed a chassis using CAD modeling, 3D printing, and laser cutting; designed a PCB for a PIC32 microcontroller using Autodesk Eagle and soldered components into place; created a program in Java to run on an Android phone and locate a red line with the onboard camera; created a program in C to run on the PIC32 and use the location of that red line to apply PID control to individual wheel motors in order to make the drone follow the line; experimented with a number of potentially useful components, including making a custom HID mouse based on IMU readings, using an LCD display for various data output functions, and reading to and from SPI and I2C expansion chips to make more communications ports available.  
 
 
 ## Hardware
@@ -41,11 +41,11 @@ I designed and fabricated the components for the drone chassis from scratch with
 <img src="./public/images/line/cad_assembly.png" alt="CAD Assembly" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
 #### Electronics
-The onboard electronics for this project consisted of a custom PCB for a PIC32 microprocessor and mounted motor driver shield; off the shelf circuit components, motors, and wiring; a 6V rechargeable LiPo battery; and a Moto G cell phone running the Android operating system.  
+The onboard electronics for this project consisted of a custom PCB for a PIC32 microcontroller and mounted motor driver shield; off the shelf circuit components, motors, and wiring; a 6V rechargeable LiPo battery; and a Moto G cell phone running the Android operating system.  
 
 <img src="./public/images/line/complete_circuit.jpg" alt="Breadboard" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
 
-I designed the microprocessor PCB in Autodesk Eagle to greatly and cheaply reduce the size and wiring complexity of using the PIC32 for motor control on this project.  
+I designed the microcontroller PCB in Autodesk Eagle to greatly and cheaply reduce the size and wiring complexity of using the PIC32 for motor control on this project.  
 
 <img src="./public/images/line/pcb_schematic.png" alt="PCB Schematics" style="display: inline-block; max-width: 59%; max-height: 59%;" />
 <img src="./public/images/line/board_schematic.png" alt="Board Diagram" style="display: inline-block; max-width: 39%; max-height: 39%;" />
@@ -56,7 +56,7 @@ Power for the motors was provided by the 6V battery routed through the motor con
 
 
 ## Software
-My software for the project consists of 3 primary components. The PID motor controller and the USB communications handler are programmed in C and run on the PIC32 microprocessor. The computer vision component is programmed in Java and runs on the Moto G. Data transfer from the Moto G to the PIC32 is performed through Serial over USB communications. The USB communication component handles these communications on the PIC32 end, while built in Android functions are used on the MotoG.  
+My software for the project consists of 3 primary components. The PID motor controller and the USB communications handler are programmed in C and run on the PIC32 microcontroller. The computer vision component is programmed in Java and runs on the Moto G. Data transfer from the Moto G to the PIC32 is performed through Serial over USB communications. The USB communication component handles these communications on the PIC32 end, while built in Android functions are used on the MotoG.  
 
 #### Motor Controller
 The motor control algorithm is a C program running on the PIC32 as a 500Hz interrupt. The algorithm has a control loop for each wheel which determines current wheel velocity by applying a moving average filter to wheel encoder data, compares this value to the desired wheel velocity to calculate error, applies a PI control calculation to determine an appropriate PWM duty cycle, and sets the relevant PWM generator accordingly.  

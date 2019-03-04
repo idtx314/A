@@ -6,14 +6,14 @@ image: quadcopter/quad.jpg
 permalink: "project-3.html"
 ---
 
-|Key Skills & Tools           ||                    |
-|:----------------           -||:-------------------|
-|IMU (MPU-9250)               ||  PID Control       |
-|Motor Control                ||  C                 |
-|Microprocessor (Raspberry Pi)||  Group Work        |
-|SSH                          ||  Electronics       |
-|Sensor Fusion                ||  State Estimation  |
-|Feedback Control             ||  Mechatronics      |
+|Key Skills & Tools            ||                    |
+|:----------------            -||:-------------------|
+|IMU (MPU-9250)                ||  PID Control       |
+|Motor Control                 ||  C                 |
+|Microprocessors (Raspberry Pi)||  Group Work        |
+|SSH                           ||  Electronics       |
+|Sensor Fusion                 ||  State Estimation  |
+|Feedback Control              ||  Mechatronics      |
 
 
 
