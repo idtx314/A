@@ -47,6 +47,10 @@ Hardware for this project is divided into a set of wearable mounts and the onboa
 >
 >#### Wearable Mounts
 >Two small mounts secure all the project components into a complete package, which is designed to be worn on a user's person. A ring holds the sensor and feedback motor, while all other components are mounted onto a plate, which is secured to the forearm with velcro straps. My design allows the user to focus all their attention onto the finger when attempting to "feel" a magnetic field while minimizing the perceived weight of the package. All CAD modeling for these components was done in Onshape, an online sister product of Solidworks. Prototypes were 3D printed from PLA plastic.
+
+<img src="./public/images/mag_sense/ring.png" alt="IMU Ring" style="display: inline-block; max-width: 49%; max-height: 49%;" />
+<img src="./public/images/mag_sense/forearm.png" alt="Forearm Plate" style="display: inline-block; max-width: 49%; max-height: 49%;" />
+
 ><br />
 ><br />
 >
