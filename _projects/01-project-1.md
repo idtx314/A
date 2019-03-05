@@ -1,64 +1,108 @@
 ---
 layout: project
-title: Mag-Sense Wearable with Haptic Feedback
+title: Mag-Sense Wearable Device
 date: March 23, 2018
-image: glove_prototype.jpg
+image: mag_sense/glove_prototype.jpg
 permalink: "project-1.html"
 ---
 
+<!-- 
+TODO:
 
-|Key Skills & Tools                 ||                          |
-|:----------------------------------||:-------------------------|
-|IMU (MPU-9250)                     ||ROS                       |
-|Motor Driver (DRV-2605L)           ||Microprocessor (Arduino)  |
-|Logic Level Converter (BOB-12009)  ||I2C                       |
-|Serial                             ||Electronics               |
-|Python                             ||Mechatronics              |
-|CAD (Onshape)                      ||3D Printing               |
+-->
 
 
+<!-- Tags and Video -->
+<!-- Line before a table should be blank -->
+
+|Key Skills & Tools          ||                              |
+|:---------------------------||:-----------------------------|
+|Microcontrollers (Arduino)  ||Sensor Fusion                 |
+|Programming (C, Python)     ||Communications (Serial, I2C)  |
 
 
-## Summary
 
-This wearable device detects magnetic fields around it and communicates their strength to the user through tactile feedback. In visualization mode it also displays the orientation of the sensor and the directionality of the magnetic field relative to itself on a connected computer display.  
-
-![Display Mode](../public/images/visualization.png){: height="170px" width="300px"}
-
-This project was primarily a break-in exercise for my interest in portable and wearable sensing devices. Use cases are mostly limited to curiosity, although practical applications do exist.  
-
-Electrical currents and operating appliances generate magnetic fields, for example, so the wearable provides knowledge about the state of electrical circuits and equipment that doesn't rely on the equipment itself. This would be useful in situations where the equipment's own feedback is unreliable, unfamiliar, or inaccessible. Such situations might include the design and repair of heavy machinery, disaster response in urban areas, or operations near high-power equipment in atypical environments like underwater power lines or space stations.  
-
-![Why would you want this?](../public/images/transformer.jpg){: height="135px" width="300px"}
-
-To build on this potential applicability the wearable uses vibration instead of a visual or audio cue. This allows the device to communicate with the user through a sensory channel less saturated than sight or hearing, and in a way that will demand less of their focus to process.
-
-When large magnetic fields are not a matter of concern, the device has some utility for navigation and orientation as well, since it can be used as a compass in visualization mode.  
+## Repository
+[Arduino Code](https://github.com/idtx314/gloveduino)
+[ROS Code](https://github.com/idtx314/rosglove)
+[CAD Files](https://cad.onshape.com/documents/59f6b9e68d51d87d17f218b7/w/08135ad5edb522fb621632bc/e/02c82a1bae2817e4d66146ec)
+<br />
+<br />
+<br />
 
 
-The ROS code for the project is written in Python, while the Arduino is programmed in a C-like language specific to the hardware. All code can be found in [this repository](https://github.com/idtx314/rosglove)
+
+## Introduction
+In this project I created and proposed the project concept of a device that would allow a user to "feel" magnetic fields; selected a microcontroller, IMU, and motor; soldered and wired together the electronic components; designed wearable hardware in CAD; fabricated prototypes with 3D printing; wrote software in C to read from sensors, apply motor control, estimate state using sensor fusion, and communicate state estimates over serial; wrote software in Python to visualize state estimates using ROS and Rviz; and refined the hardware and software through failure analysis and user testing.
+<br />
+<br />
+<br />
 
 
-## Implementation Summary
-The project was built on a Sparkfun Redboard arduino variant connected by USB cable to a Linux laptop computer running Ubuntu 16.04. The Redboard and the laptop use Serial communication over the USB line, while the Redboard communicates with the IMU and haptic motor driver board using the I2C protocol. The hardware prototype is mounted on 3D printed parts and worn on the fingers and forearm using velcro straps.
 
-The MPU-9250 IMU (Inertial Measurement Unit) is 9 axis, including an accelerometer, a gyroscope, and a magnetometer. The magnetometer data is used for determining the magnetic field strength, while the gyro and accelerometer are used to calculate the orientation of the device in space, so that it can be displayed in the visualizer.
-
-The code running on the Redboard relies on the libraries distributed with the driver board and IMU for ease of use, segueing into lower level interactions with the hardware at points where I wanted to test my understanding. I built on redistributable example code authored by "JohnChi" and Kris Winer and maintained the order and general structure of their function calls to avoid hard to diagnose issues in interacting with the IMU.
-
-## Implementation Details
-The setup function initializes serial and I2C communications, collects calibration data for the IMU, and preps both the IMU and the Driver for use. This includes a separate calibration function for the magnetometer that applies "Hard Iron" correction to match up the reading centers of each axis at the origin and a simplified "Soft Iron" correction, which normalizes the readings such that a reading of static magnitude would form an ellipsoidal surface if rotated about the origin. An ideal soft iron correction would form a sphere rather than an ellipsoid, but this is close enough for my purposes.
-
-![Uncalibrated](../public/images/Calibration.jpg){: height="300px" width="300px"} ![Hard Iron](../public/images/Calibration2.png){: height="300px" width="300px"} ![Soft Iron](../public/images/Calibration3.png){: height="300px" width="300px"}  
-
-The operating loop retrieves data from the accelerometer, gyroscope, and magnetomoter registers, then translates the reads from raw values into g, degrees/s, and milliGauss. The magnitude of the magnetic field is calculated as a sum of squares. The roll and pitch of the IMU are determined using a complimentary filter that favors the gyro. The yaw is calculated with dead reckoning based on gyro output.
-After the data is processed the magnetometer axes readings and magnitude, roll, pitch, and yaw are composed into a comma separated string, terminated with a newline, and transmitted over the Redboard's serial line at 9600 baud. If the field magnitude is large enough, the Redboard then sends commands to the Driver board to queue and execute a specific PWM sequence. This sequence was selected from a premade set, and chosen for being both distinct and short, allowing it to occur repeatedly. In order to give more granularity to the feedback, a magnitude dependent switch statement causes a longer or shorter delay depending on whether the field is weak or strong. This results in the motor vibrating more frequently as the IMU draws closer to a magnetic source.
-
-The arduino_receiver.py script launches the node "data_pub", which listens to incoming serial communications on port "ttyUSB0", builds the incoming characters into a string, and forms a comma separated list each time it receives a newline. The magnetometer data and the euler angles are each used to generate a Point message, which are then published to the "glove_data" and "glove_transform" topics, respectively.
-
-The transform_broadcaster.py script launches the node "transform_broadcaster", which subscribes to the "glove_transform" topic. The node constantly broadcasts two tf transformations, one from the world frame to the glove_frame, whose axes match the gyroscope/accelerometer axes, and an additional transformation from the glove_frame to the magnetometer frame for convenience when visualizing the magnetometer data. The glove_frame quaternion is updated each time new IMU data is published to "glove_transform", while the magnetometer_frame quaternion is a constant rotation from the glove_frame.
-
-The arduino_publisher.py script launches the node "glove_publisher", which subscribes to the topic "glove_data" to receive the Point messages containing the magnemoter axes readings. The node constantly publishes a Marker message to Rviz's "visualization_marker" topic, creating an arrow marker in the magnetometer frame. Whenever "glove_data" is updated, the endpoint of the arrow is updated with the scaled values from the magnetometer axes.
+## Hardware
+Hardware for this project is divided into a set of wearable mounts and the onboard electronics.
+<br />
+<br />
+>
+>#### Wearable Mounts
+>Two small mounts secure all the project components into a complete package, which is designed to be worn on a user's person. A ring holds the sensor and feedback motor, while all other components are mounted onto a plate, which is secured to the forearm with velcro straps. My design allows the user to focus all their attention onto the finger when attempting to "feel" a magnetic field while minimizing the perceived weight of the package. All CAD modeling for these components was done in Onshape, an online sister product of Solidworks. Prototypes were 3D printed from PLA plastic.
+><br />
+><br />
+>
+>#### Electronics
+>The electronics for this project consist of an Arduino microcontroller PCB, a logic converter PCB, an MPU-9250 9-axis IMU (with accelerometers, gyros, and magnetometers), a motor driver PCB, and an Eccentric Rotating Mass (ERM) motor for haptic feedback.
+>The IMU and motor are mounted on the ring mount. The Arduino, logic converter, and motor driver boards are mounted on the forearm mount. Soldered connections between these components use multi-stranded wiring for flexibility and are reinforced with heat shrink tubing and adhesive. Power and serial communications are provided by the USB port on the Arduino.
+<br />
+<br />
+<br />
 
 
-The ROS package also includes an appropriate Rviz configuration and a launch file to conveniently launch the entire visualization network with a single terminal command.
+
+## Software
+The software for this project performs four primary functions: IMU calibration, data collection and state estimation, motor control, and state visualization. Most functions are handled on the Arduino microcontroller, with visualization being performed by a ROS node intended to run on an attached Linux system.
+<br />
+<br />
+>
+>#### IMU Calibration
+>The IMU calibration algorithm is written in C on the Arduino, and runs during the microcontroller's initialization. The algorithm calculates bias values for the accelerometers and gyros using at rest readings, then performs hard iron and soft iron calibration of the magnetometer's hall sensors to co-locate the reading centers and normalize the reading surface to an ellipsoid.  
+>Instructions on when and how to move the IMU during calibration are provided over serial, and will be printed to the terminal if received by the ROS node made to handle serial communications.  
+>Significant portions of the calibration code were provided by Kris Winer, whose libraries were helpful for learning to use the IMU.
+
+<img src="./public/images/mag_sense/calibration.jpg" alt="Before Cal" style="display: inline-block; max-width: 33%; max-height: 33%;" />
+<img src="./public/images/mag_sense/calibration2.png" alt="After Hard Iron" style="display: inline-block; max-width: 33%; max-height: 33%;" />
+<img src="./public/images/mag_sense/calibration3.png" alt="After Soft Iron" style="display: inline-block; max-width: 33%; max-height: 33%;" />
+
+><br />
+><br />
+>
+>#### Data Collection and State Estimation
+>The state estimation algorithm is written in C on the Arduino, as part of the looping program. Data from the gyro, accelerometer, and magnetometer registers is read from the IMU using I2C communications protocol.  
+>The gyro data is integrated over time to produce an estimated change from the initial orientation of the IMU. Accelerometer data is used to estimate roll and pitch based on the direction of gravity, and these estimates are combined with the gyro values using a complimentary filter in order to correct for the compounding error created by integration.  
+>The final estimated orientation is broadcast using Serial protocol over the USB port, along with the magnetometer readings.
+><br />
+><br />
+>
+>#### Motor Control
+>The motor control algorithm is written in C on the Arduino, as part of the looping program. Vibrations of different frequency and pattern are commanded based on the magnitude of the magnetic field detected by the IMU, in order to indicate the approximate strength of the field to the user.
+><br />
+><br />
+>
+>#### State Visualization
+>The magnetic field and IMU data is visualized using a pair of ROS nodes programmed in Python, and intended to run on a computer connected to the Arduino via USB.  
+>The first ROS node listens for serial communications containing orientation data over the USB port and translates the contents into a ROS message. The second ROS node receives that message and uses the data to publish visualization markers for the magnetic field strength and direction, and the orientation of the IMU compared to its initial position. These markers can then be visualized using Rviz.
+
+<img src="./public/images/mag_sense/visualization.png" alt="Visualizer" width="500" style="display: block; margin-left: auto; margin-right: auto; padding: 10px;"/>
+
+<br />
+<br />
+<br />
+
+
+
+## Relevant Links
+* JohnChi Example Sketch: https://playground.arduino.cc/Main/MPU-6050
+* Kris Winer MPU9250 Algorithms: https://github.com/kriswiner/MPU9250
+* Sparkfun Haptic Motor Driver Library: https://www.sparkfun.com/products/14538
+* Sparkfun IMU Library: https://www.sparkfun.com/products/13762
+
