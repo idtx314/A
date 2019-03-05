@@ -69,9 +69,9 @@ The computer vision processor algorithm is an event based program that runs in J
 
 
 ## Relevant Links
-* MPLAB Harmony IDE: https://www.microchip.com/mplab/mplab-harmony
-* Android Studio IDE: https://developer.android.com/studio/
-* Onshape: https://www.onshape.com/
-* Autodesk Eagle: https://www.autodesk.com/products/eagle/overview
+* [MPLAB Harmony IDE](https://www.microchip.com/mplab/mplab-harmony)
+* [Android Studio IDE](https://developer.android.com/studio/)
+* [Onshape](https://www.onshape.com/)
+* [Autodesk Eagle](https://www.autodesk.com/products/eagle/overview)
 
 

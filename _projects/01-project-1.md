@@ -23,9 +23,9 @@ TODO:
 
 
 ## Repository
-[Arduino Code](https://github.com/idtx314/gloveduino)
-[ROS Code](https://github.com/idtx314/rosglove)
-[CAD Files](https://cad.onshape.com/documents/59f6b9e68d51d87d17f218b7/w/08135ad5edb522fb621632bc/e/02c82a1bae2817e4d66146ec)
+[Arduino Code](https://github.com/idtx314/gloveduino)  
+[ROS Code](https://github.com/idtx314/rosglove)  
+[CAD Files](https://cad.onshape.com/documents/59f6b9e68d51d87d17f218b7/w/08135ad5edb522fb621632bc/e/02c82a1bae2817e4d66146ec)  
 <br />
 <br />
 <br />
@@ -101,8 +101,8 @@ The software for this project performs four primary functions: IMU calibration, 
 
 
 ## Relevant Links
-* JohnChi Example Sketch: https://playground.arduino.cc/Main/MPU-6050
-* Kris Winer MPU9250 Algorithms: https://github.com/kriswiner/MPU9250
-* Sparkfun Haptic Motor Driver Library: https://www.sparkfun.com/products/14538
-* Sparkfun IMU Library: https://www.sparkfun.com/products/13762
+* [JohnChi Example Sketch](https://playground.arduino.cc/Main/MPU-6050)
+* [Kris Winer MPU9250 Algorithms](https://github.com/kriswiner/MPU9250)
+* [Sparkfun Haptic Motor Driver Library](https://www.sparkfun.com/products/14538)
+* [Sparkfun IMU Library](https://www.sparkfun.com/products/13762)
 

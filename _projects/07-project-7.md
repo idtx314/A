@@ -87,9 +87,11 @@ There are three primary functions: trajectory parsing, gcode sending, and image 
 <br />
 <br />
 
+
+
 ## Relevant Links
-* Robot Operating System: http://www.ros.org/
-* The Point Cloud Library: http://www.pointclouds.org/
-* Octomap: http://octomap.github.io/
-* OpenCV: https://opencv.org/
-* Prabhakar, A., A. Mavrommati, J. A. Schultz, and T. D. Murphey, "Autonomous Visual Rendering using Physical Motion", Workshop on the Algorithmic Foundations in Robotics (WAFR) 2016, 2016.
+* [Robot Operating System](http://www.ros.org/)
+* [The Point Cloud Library](http://www.pointclouds.org/)
+* [Octomap](http://octomap.github.io/)
+* [OpenCV](https://opencv.org/)
+* [Prabhakar, A., A. Mavrommati, J. A. Schultz, and T. D. Murphey, "Autonomous Visual Rendering using Physical Motion", Workshop on the Algorithmic Foundations in Robotics (WAFR) 2016, 2016.](https://nxr.northwestern.edu/people/ahalya-prabhakar)
