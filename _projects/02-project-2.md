@@ -63,7 +63,6 @@ I chose to build the nodes as ROS service providers so that they could be easily
 
 <img src="./public/images/starbax/baxter_open.gif" alt="Lid Open" style="display: inline-block; max-width: 30%; max-height: 30%;" />
 <img src="./public/images/starbax/baxter_close.gif" alt="Lid Close" style="display: inline-block; max-width: 30%; max-height: 30%;" />
-<img src="./public/images/starbax/baxter_press.gif" alt="Button Press" style="display: inline-block; max-width: 30%; max-height: 30%;" />
 
 #### Vision Processing Node
 When called, the vision processing nodes were responsible for locating relevant objects in the workspace and reporting their positions back to the main control node for use in trajectory planning.  
