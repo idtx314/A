@@ -17,5 +17,3 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-
-theme: jekyll-theme-cayman
