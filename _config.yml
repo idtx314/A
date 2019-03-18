@@ -3,7 +3,6 @@ title:              "Ian Davis' Portfolio"
 email:              "ian@ianDrobo.com"
 description:        "The Project Portfolio of Ian Davis"
 url:                "https://idtx314.github.io"
-baseurl:            "/"
 
 # File structure settings
 image_path:         /public/images
