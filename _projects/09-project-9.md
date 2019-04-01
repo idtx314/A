@@ -21,74 +21,74 @@ Add a section on other work done during the course, like making learning algorit
 
 
 ## Repositories
-[Github](https://github.com/)
-[Project Website](https://benbdon.wixsite.com/crimeml)
+[Github](https://github.com/)  
+[Project Website](https://benbdon.wixsite.com/crimeml)  
 <br />
 <br />
 <br />
 
 
 ## Introduction
-In this project I worked with a partner to conceptualize a machine learning application, procured a data set, programmed a data pre-processing script, trained an array of machine learners and compared their efficacy, and wrote detailed reports and status updates.
-In side and preparatory projects I also implemented several machine learners from scratch and extensively studied the nature and applicability of machine learning methods.
+In this project I worked with a partner to conceptualize a machine learning application, procured a data set, programmed a data pre-processing script, trained an array of machine learners and compared their efficacy, and wrote detailed reports and status updates.  
+In side and preparatory projects I also implemented several machine learners from scratch and extensively studied the nature and applicability of machine learning methods.  
 <br />
 <br />
 <br />
 
 
 ## Concept Development
-The base concept for the project was to create a machine learner that could make predictions about crime, trained on data from our own city of Chicago. Because of the low probability of training an accurate machine learner for such a complex task, the components of the project were designed to provide interesting data even if no accurate learner could be trained. The final concept had two major components, a crime type predictor and a study of the Lunar Effect.
+The base concept for the project was to create a machine learner that could make predictions about crime, trained on data from our own city of Chicago. Because of the low probability of training an accurate machine learner for such a complex task, the components of the project were designed to provide interesting data even if no accurate learner could be trained. The final concept had two major components, a crime type predictor and a study of the Lunar Effect.  
 <br />
 <br />
 >
 >#### Crime Type Predictor
->The projects primary goal was to predict what type of crime was most likely to occur given the time and location of interest.
->The dataset used in the project was compiled from the Chicago Police Department's "Citizen Law Enforcement Analysis and Reporting" system, which we acquired from the Kaggle website.
->Six useful categories were identified in the data: Day of the week, Time of the day, IUCR (a classification code indicating the type of crime), location type, latitude, and longitude. IUCR was the most interesting category to predict, because such a learner might allow decisions to be made based on the potential severity of a crime at a given time and location.
->Because successful prediction was unlikely, a variety of machine learning algorithms were trained to make IUCR predictions. Comparing different learners to each other would provide interesting insight about what sort of algorithm was best suited to the task, even if none of the learners were effective predictors.
+>The projects primary goal was to predict what type of crime was most likely to occur given the time and location of interest.  
+>The dataset used in the project was compiled from the Chicago Police Department's "Citizen Law Enforcement Analysis and Reporting" system, which we acquired from the Kaggle website.  
+>Six useful categories were identified in the data: Day of the week, Time of the day, IUCR (a classification code indicating the type of crime), location type, latitude, and longitude. IUCR was the most interesting category to predict, because such a learner might allow decisions to be made based on the potential severity of a crime at a given time and location.  
+>Because successful prediction was unlikely, a variety of machine learning algorithms were trained to make IUCR predictions. Comparing different learners to each other would provide interesting insight about what sort of algorithm was best suited to the task, even if none of the learners were effective predictors.  
 ><br />
 ><br />
 >
 >#### The Lunar Effect
->The project's secondary goal was to determine whether the phase of the moon is a significant predictor of crime type.
->In 1984 the British Medical Journal published a study detailing crime rates collected in India. The study indicated that crime rates rose drastically on full moon nights. Attempts to reproduce the results of this study have been mixed, but a belief in the "Lunar Effect" has taken root among emergency responders and medical personnel.
->If the moon was indeed having an effect on crime in Chicago, it seemed likely that it would be a significant predictive factor in the type of crime commited, in much that same way that warm weather has been linked to increases in violent crime[1]. Therefore, an additional goal was to train learners with added data on Lunar phase and compare their effectiveness to the learners trained without that data. It was expected that the Lunar Learners would be more accurate, or at least that Lunar phase would show up as a significant predictor in the results.
+>The project's secondary goal was to determine whether the phase of the moon is a significant predictor of crime type.  
+>In 1984 the British Medical Journal published a study detailing crime rates collected in India. The study indicated that crime rates rose drastically on full moon nights. Attempts to reproduce the results of this study have been mixed, but a belief in the "Lunar Effect" has taken root among emergency responders and medical personnel.  
+>If the moon was indeed having an effect on crime in Chicago, it seemed likely that it would be a significant predictive factor in the type of crime commited, in much that same way that warm weather has been linked to increases in violent crime[1]. Therefore, an additional goal was to train learners with added data on Lunar phase and compare their effectiveness to the learners trained without that data. It was expected that the Lunar Learners would be more accurate, or at least that Lunar phase would show up as a significant predictor in the results.  
 ><br />
 ><br />
 ><br />
 
 
 ## Project Execution
-Completing the project required four major milestones to be achieved: Acquisition of the dataset, pre-processing of the dataset, training of machine learners, and analysis of results.
+Completing the project required four major milestones to be achieved: Acquisition of the dataset, pre-processing of the dataset, training of machine learners, and analysis of results.  
 <br />
 <br />
 >
 >#### Data Acquisition
->In 2012, in response to the "Open Data Executive Order", the Chicago Police Department created the "Citizen Law Enforcement Analysis and Reporting", or "CLEAR", database. This publicly available record contains information on reported criminal activity dating back to 2001. The dataset is one of the most extensive released by any police deparment in the nation, and the CPD continues to release new information into the database as time goes on. Each crime record contains the information needed to identify the time, nature, and location of a criminal incident accurate to the city block. These properties and the generally machine friendly format of the data made the CLEAR database an ideal tool for this project.
->Lunar phase data was acquired by using "moon.py", a public domain python module designed to mathematically calculate the phase of the moon for a given date.
+>In 2012, in response to the "Open Data Executive Order", the Chicago Police Department created the "Citizen Law Enforcement Analysis and Reporting", or "CLEAR", database. This publicly available record contains information on reported criminal activity dating back to 2001. The dataset is one of the most extensive released by any police deparment in the nation, and the CPD continues to release new information into the database as time goes on. Each crime record contains the information needed to identify the time, nature, and location of a criminal incident accurate to the city block. These properties and the generally machine friendly format of the data made the CLEAR database an ideal tool for this project.  
+>Lunar phase data was acquired by using "moon.py", a public domain python module designed to mathematically calculate the phase of the moon for a given date.  
 ><br />
 ><br />
 >
 >#### Data Pre-Processing
->Upon our initial examination of the acquired dataset, we found that it was in somewhat poor condition, having numerous entries that were obviously erroneous and a number of inconsistencies in labeling. In addition to these issues the set contained various headers and footers, along with a number of data columns that we deemed irrelevant to our goals.
->Selections from the data and manual adjustments were used to identify the main tasks that would need to be performed before processing and a Python script was written in order to strip out uneccesary information and correct some of the more common errors. Error codes from attempted machine learner training were then used to identify remaining issues hidden deep in the data and these issues were corrected either manually in the original set or automatically by modifying the pre-processing algorithm.
->Extensions to the pre-processor allowed the inclusion of Lunar phase data from moon.py and the collapsing of crime codes into shared categories.
+>Upon our initial examination of the acquired dataset, we found that it was in somewhat poor condition, having numerous entries that were obviously erroneous and a number of inconsistencies in labeling. In addition to these issues the set contained various headers and footers, along with a number of data columns that we deemed irrelevant to our goals.  
+>Selections from the data and manual adjustments were used to identify the main tasks that would need to be performed before processing and a Python script was written in order to strip out uneccesary information and correct some of the more common errors. Error codes from attempted machine learner training were then used to identify remaining issues hidden deep in the data and these issues were corrected either manually in the original set or automatically by modifying the pre-processing algorithm.  
+>Extensions to the pre-processor allowed the inclusion of Lunar phase data from moon.py and the collapsing of crime codes into shared categories.  
 ><br />
 ><br />
 >
 >#### Machine Learner Training
->In order to quickly train a variety of machine learners I made use of Weka, a tool that allows the use of a collection of training algorithms on any correctly formatted data set. For each training algorithm Weka was set to use ten fold cross validation during training, with 10% of the input data set aside for validation. All data from the year 2018 was reserved for final testing of the trained learners, on the reasoning that the most relevant test data would be whether a learner could predict the most recent crime data that was available.
->I discovered quickly that Weka simply couldn't train most algorithms with a set of data as vast as the one that I was attempting to use. After evaluating how large a data set Weka could reliably handle, the training data was cut down to just the year 2017, using the same settings mentioned previously. It's of note that even with more than 11,000 entries the 2017 data is only a small fraction of the entire clear database. As machine learners generally become more accurate when trained on more data, it's likely that this reduction in set size has had a negative impact on the results of the project.
->The final collection of trained learners included examples of Boosting, Bagging, Nearest Neighbor, Bayesian, and Decision Tree learners. It was predicted that Nearest Neighbor and Decision Tree would be the best suited to the data, and therefore the most accurate because we believed that physical adjacency would be a large predictive factor and that the data had been well prepared to remove irrelevant categories.
->We used Decision Tree learners to evaluate the effect of Lunar phase data so that we could examine the depth at which the tree split on the phase category as well as the predictiveness of the resulting learners. The depth of the split would be indicative of how predictive the additional category was.
+>In order to quickly train a variety of machine learners I made use of Weka, a tool that allows the use of a collection of training algorithms on any correctly formatted data set. For each training algorithm Weka was set to use ten fold cross validation during training, with 10% of the input data set aside for validation. All data from the year 2018 was reserved for final testing of the trained learners, on the reasoning that the most relevant test data would be whether a learner could predict the most recent crime data that was available.  
+>I discovered quickly that Weka simply couldn't train most algorithms with a set of data as vast as the one that I was attempting to use. After evaluating how large a data set Weka could reliably handle, the training data was cut down to just the year 2017, using the same settings mentioned previously. It's of note that even with more than 11,000 entries the 2017 data is only a small fraction of the entire clear database. As machine learners generally become more accurate when trained on more data, it's likely that this reduction in set size has had a negative impact on the results of the project.  
+>The final collection of trained learners included examples of Boosting, Bagging, Nearest Neighbor, Bayesian, and Decision Tree learners. It was predicted that Nearest Neighbor and Decision Tree would be the best suited to the data, and therefore the most accurate because we believed that physical adjacency would be a large predictive factor and that the data had been well prepared to remove irrelevant categories.  
+>We used Decision Tree learners to evaluate the effect of Lunar phase data so that we could examine the depth at which the tree split on the phase category as well as the predictiveness of the resulting learners. The depth of the split would be indicative of how predictive the additional category was.  
 ><br />
 ><br />
 >
 >#### Results Analysis
->The ZeroR algorithm, which is frequently used as a baseline to measure other machine learners against, achieved ~9% accuracy when predicting the 2018 test data. The Decision Tree algorithm was among the more successful algorithms, achieving an almost 20% accuracy rate on test data, while the Nearest Neighbor algorithm fell short at only ~8% accuracy. Other predictors also achieved rates of approximately 20%, with the most effective algorithm being NaiveBayes at ~20.42% accuracy.
->Attempts were made to improve accuracy by pooling codes together but it was found that it became extremely difficult to defeat ZeroR, which simply chooses the most common classification in the result set as its prediction.
->Lunar phase data appeared to have no effect at all on the accuracy of the Decision Tree learner, and indeed the algorithm appeared to ignore the new data entirely when choosing which categories to branch on. This would suggest that Lunar phase is not a significant predictive factor in crime type, though it provides no definitive information on crime frequency during full moon nights.
->A full write up of the project results is available on our [website](https://benbdon.wixsite.com/crimeml).
+>The ZeroR algorithm, which is frequently used as a baseline to measure other machine learners against, achieved ~9% accuracy when predicting the 2018 test data. The Decision Tree algorithm was among the more successful algorithms, achieving an almost 20% accuracy rate on test data, while the Nearest Neighbor algorithm fell short at only ~8% accuracy. Other predictors also achieved rates of approximately 20%, with the most effective algorithm being NaiveBayes at ~20.42% accuracy.  
+>Attempts were made to improve accuracy by pooling codes together but it was found that it became extremely difficult to defeat ZeroR, which simply chooses the most common classification in the result set as its prediction.  
+>Lunar phase data appeared to have no effect at all on the accuracy of the Decision Tree learner, and indeed the algorithm appeared to ignore the new data entirely when choosing which categories to branch on. This would suggest that Lunar phase is not a significant predictive factor in crime type, though it provides no definitive information on crime frequency during full moon nights.  
+>A full write up of the project results is available on our [website](https://benbdon.wixsite.com/crimeml).  
 ><br />
 ><br />
 ><br />
