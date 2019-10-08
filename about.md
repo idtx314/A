@@ -2,7 +2,7 @@
 layout: about
 path: /about
 url: index.html
-image: contact.png
+image: contact.jpg
 ---
 
 ## Overview

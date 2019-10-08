@@ -2,7 +2,7 @@
 layout: contact
 path: /contact
 url: index.html
-image: contact.png
+image: contact.jpg
 ---
 
 ## Best Methods
