@@ -6,9 +6,9 @@ image: contact.jpg
 ---
 
 ## Best Methods
-The best way to contact me is usually by e-mail. I can also often be reached by cell, but due to reception issues at the college messages may not be returned on the day they are received.
+The best way to contact me is by e-mail. I can be reached by cell phone as well, but I often don't answer unscheduled calls. Feel free to leave a message, and I'll endeavor to return your call within 24 hours.
 
 * Phone: (940) 206-1732
 * Email: ian@ianDrobo.com
 * LinkedIn: linkedin.com/in/iandrobo
-* Address: 617 Grove ST, APT 6B, Evanston, IL, 60201
+* Address: 633 Monroe Street, Saint Charles, MO, 63301
